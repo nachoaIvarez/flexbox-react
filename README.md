@@ -50,7 +50,7 @@ import { Flexbox, FlexItem } from "flexbox-react";
 
 //...
 <Flexbox flexDirection={"row"}>
-  <FlexItem alignSelf{"flex-start"}>
+  <FlexItem alignSelf={"flex-start"}>
     <h1>Hi!</h1>
   </FlexItem>
 </FlexItem>

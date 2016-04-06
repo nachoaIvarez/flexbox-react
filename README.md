@@ -55,7 +55,7 @@ import { Flexbox, FlexItem } from "flexbox-react";
   <FlexItem alignSelf={"flex-start"}>
     <h1>Hi!</h1>
   </FlexItem>
-</FlexItem>
+</Flexbox>
 ```
 
 ## License

@@ -46,9 +46,14 @@ npm i -D flexbox-react
 ## Usage
 
 ```js
-import flexboxReact from "flexbox-react"
+import { Flexbox, FlexItem } from "flexbox-react";
 
-flexboxReact() // true
+//...
+<Flexbox flexDirection={"row"}>
+  <FlexItem alignSelf{"flex-start"}>
+    <h1>Hi!</h1>
+  </FlexItem>
+</FlexItem>
 ```
 
 ## License

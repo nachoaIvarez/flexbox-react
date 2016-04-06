@@ -43,9 +43,6 @@ No hardcoded/unnecesary vendor prefixes, by autoprefixer.
 <p align="center"><big>
 No need to import any new stylesheet or to add any styles to your existing stylesheets. It works out of the box, just by using the component.
 </big></p>
-<p align="center"><big>
-Minimal. It has no dependencies.
-</big></p>
 
 
 ## Install

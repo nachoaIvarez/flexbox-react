@@ -60,12 +60,14 @@
     "eslint-config-airbnb": "*",
     "eslint-plugin-react": "*",
     "isparta": "*",
-    "postcss-js": "*",
     "react": "*",
     "react-dom": "*",
     "rimraf": "*",
     "tap-spec": "*",
     "tape": "*",
     "watch": "*"
+  },
+  "dependencies": {
+    "postcss-js": "*"
   }
 }

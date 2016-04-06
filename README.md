@@ -51,8 +51,8 @@ npm install --save flexbox-react
 import { Flexbox, FlexItem } from "flexbox-react";
 
 //...
-<Flexbox flexDirection={"row"}>
-  <FlexItem alignSelf={"flex-start"}>
+<Flexbox flexDirection="row">
+  <FlexItem alignSelf="flex-start">
     <h1>Hi!</h1>
   </FlexItem>
 </Flexbox>

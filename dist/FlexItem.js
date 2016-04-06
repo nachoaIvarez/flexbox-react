@@ -28,25 +28,24 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var prefixer = _postcssJs2.default.sync([_autoprefixer2.default]);
 
-var Flexbox = function (_React$Component) {
-  _inherits(Flexbox, _React$Component);
+var FlexItem = function (_React$Component) {
+  _inherits(FlexItem, _React$Component);
 
-  function Flexbox() {
-    _classCallCheck(this, Flexbox);
+  function FlexItem() {
+    _classCallCheck(this, FlexItem);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(Flexbox).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(FlexItem).apply(this, arguments));
   }
 
-  _createClass(Flexbox, [{
+  _createClass(FlexItem, [{
     key: 'styles',
     value: function styles() {
       return prefixer({
-        display: this.props.inline ? 'inline-flex' : 'flex',
-        alignContent: this.props.alignContent,
-        alignItems: this.props.alignItems,
-        flexDirection: this.props.flexDirection,
-        justifyContent: this.props.justifyContent,
-        flexWrap: this.props.flexWrap
+        order: this.props.order,
+        flexGrow: this.props.flexGrow,
+        flexShrink: this.props.flexShrink,
+        flexBasis: this.props.flexBasis,
+        flex: this.props.flex
       });
     }
   }, {
@@ -60,17 +59,17 @@ var Flexbox = function (_React$Component) {
     }
   }]);
 
-  return Flexbox;
+  return FlexItem;
 }(_react2.default.Component);
 
-Flexbox.propTypes = {
-  alignContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
-  alignItems: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
-  flexDirection: _react.PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
-  justifyContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around']),
-  flexWrap: _react.PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
-  inline: _react.PropTypes.bool,
+FlexItem.propTypes = {
+  order: _react.PropTypes.number,
+  flexGrow: _react.PropTypes.number,
+  flexShrink: _react.PropTypes.number,
+  flexBasis: _react.PropTypes.string,
+  flex: _react.PropTypes.string,
+  alignSelf: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
   children: _react2.default.PropTypes.node
 };
 
-exports.default = Flexbox;
+exports.default = FlexItem;

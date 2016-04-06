@@ -1,0 +1,71 @@
+{
+  "name": "flexbox-react",
+  "version": "1.0.0",
+  "description": "Unopinionated, standard compilant flexbox components. You don&#39;t need to learn any propietary syntax. If you know how to use flexbox, you know how to use flexbox-react components.",
+  "main": "dist/index.js",
+  "files": [
+    "bin/",
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint src test",
+    "check": "npm run lint -s && dependency-check package.json --entry src",
+    "watch": "watch 'npm run build' src test",
+    "test": "babel-node test/index.js | tspec",
+    "prebuild": "npm run check -s && npm run clean -s",
+    "build": "babel --optional runtime src -d dist",
+    "postbuild": "npm run test -s",
+    "coverage": "babel-node node_modules/isparta/bin/isparta cover test/index.js",
+    "coveralls": "npm run coverage -s && coveralls < coverage/lcov.info",
+    "postcoveralls": "rimraf ./coverage",
+    "prepublish": "npm run build -s",
+    "deploy": "git pull --rebase origin master && git push origin master",
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish",
+    "postpublish": "git push origin master --follow-tags",
+    "toc": "doctoc --github --title \"# Changelog\" CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nachoaIvarez/flexbox-react.git"
+  },
+  "keywords": [
+    "react",
+    "flexbox",
+    "layout"
+  ],
+  "author": " <ignacioalvarez92@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nachoaIvarez/flexbox-react/issues"
+  },
+  "homepage": "https://github.com/nachoaIvarez/flexbox-react#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "coveralls": "*",
+    "dependency-check": "*",
+    "doctoc": "*",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-react": "*",
+    "isparta": "*",
+    "postcss-js": "*",
+    "react": "*",
+    "react-dom": "*",
+    "rimraf": "*",
+    "tap-spec": "*",
+    "tape": "*",
+    "watch": "*"
+  }
+}

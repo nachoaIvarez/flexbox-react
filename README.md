@@ -1,3 +1,5 @@
+# Not ready yet. Stay tuned! 
+
 <big><h1 align="center">flexbox-react</h1></big>
 
 <p align="center">
@@ -40,7 +42,7 @@ Unopinionated, standard compilant flexbox components. You don&#39;t need to lear
 ## Install
 
 ```sh
-npm i -D flexbox-react
+npm install --save flexbox-react
 ```
 
 ## Usage

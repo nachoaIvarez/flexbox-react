@@ -36,6 +36,12 @@
 
 <p align="center"><big>
 Unopinionated, standard compilant flexbox components. You don&#39;t need to learn any propietary syntax. If you know how to use flexbox, you know how to use flexbox-react components.
+
+No hardcoded/unnecesary vendor prefixes, by autoprefixer.
+
+No need to import any new stylesheet or to add any styles to your existing stylesheets. It works out of the box, just by using the component.
+
+Minimal. It has no dependencies.
 </big></p>
 
 

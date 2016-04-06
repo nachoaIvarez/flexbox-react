@@ -35,7 +35,7 @@
 </p>
 
 <p align="center"><big>
-Unopinionated, standard compilant flexbox components. You don&#39;t need to learn any propietary syntax. If you know how to use flexbox, you know how to use flexbox-react components.
+Unopinionated, standard compilant flexbox components. You don&#39;t need to learn any propietary syntax, classnames or API's. If you know how to use flexbox, you know how to use flexbox-react components.
 </big></p>
 <p align="center"><big>
 No hardcoded/unnecesary vendor prefixes, by autoprefixer.

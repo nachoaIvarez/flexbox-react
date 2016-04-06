@@ -1,4 +1,4 @@
-# Not ready yet. Stay tuned! 
+<big><h1 align="center">Not ready yet. Stay tuned! </h1></big>
 
 <big><h1 align="center">flexbox-react</h1></big>
 

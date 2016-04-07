@@ -12,14 +12,12 @@
     "lint": "eslint src test",
     "check": "npm run lint -s && dependency-check package.json --entry src",
     "watch": "watch 'npm run build' src test",
-    "test": "babel-node test/index.js | tspec",
     "prebuild": "npm run check -s && npm run clean -s",
     "build": "babel --optional runtime src -d dist",
-    "postbuild": "npm run test -s",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover test/index.js",
     "coveralls": "npm run coverage -s && coveralls < coverage/lcov.info",
     "postcoveralls": "rimraf ./coverage",
-    "prepublish": "npm run build -s",
+    "prepublish": "npm run build",
     "deploy": "git pull --rebase origin master && git push origin master",
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
@@ -47,7 +45,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
+    "autoprefixer": "*",
     "babel-cli": "*",
     "babel-core": "*",
     "babel-eslint": "*",
@@ -68,6 +66,7 @@
     "watch": "*"
   },
   "dependencies": {
+    "autoprefixer": "*",
     "postcss-js": "*"
   }
 }

@@ -1,21 +1,9 @@
-<big><h1 align="center">Not ready yet. Stay tuned! </h1></big>
-
 <big><h1 align="center">flexbox-react</h1></big>
 
 <p align="center">
   <a href="https://npmjs.org/package/flexbox-react">
     <img src="https://img.shields.io/npm/v/flexbox-react.svg?style=flat-square"
          alt="NPM Version">
-  </a>
-
-  <a href="https://coveralls.io/r/nachoaIvarez/flexbox-react">
-    <img src="https://img.shields.io/coveralls/nachoaIvarez/flexbox-react.svg?style=flat-square"
-         alt="Coverage Status">
-  </a>
-
-  <a href="https://travis-ci.org/nachoaIvarez/flexbox-react">
-    <img src="https://img.shields.io/travis/nachoaIvarez/flexbox-react.svg?style=flat-square"
-         alt="Build Status">
   </a>
 
   <a href="https://npmjs.org/package/flexbox-react">
@@ -70,12 +58,6 @@ MIT © [](http://github.com/nachoaIvarez)
 
 [npm-url]: https://npmjs.org/package/flexbox-react
 [npm-image]: https://img.shields.io/npm/v/flexbox-react.svg?style=flat-square
-
-[travis-url]: https://travis-ci.org/nachoaIvarez/flexbox-react
-[travis-image]: https://img.shields.io/travis/nachoaIvarez/flexbox-react.svg?style=flat-square
-
-[coveralls-url]: https://coveralls.io/r/nachoaIvarez/flexbox-react
-[coveralls-image]: https://img.shields.io/coveralls/nachoaIvarez/flexbox-react.svg?style=flat-square
 
 [depstat-url]: https://david-dm.org/nachoaIvarez/flexbox-react
 [depstat-image]: https://david-dm.org/nachoaIvarez/flexbox-react.svg?style=flat-square

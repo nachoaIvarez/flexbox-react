@@ -10,13 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _autoprefixer = require('autoprefixer');
+var _inlineStylePrefixer = require('inline-style-prefixer');
 
-var _autoprefixer2 = _interopRequireDefault(_autoprefixer);
-
-var _postcssJs = require('postcss-js');
-
-var _postcssJs2 = _interopRequireDefault(_postcssJs);
+var _inlineStylePrefixer2 = _interopRequireDefault(_inlineStylePrefixer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,7 +22,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var prefixer = _postcssJs2.default.sync([_autoprefixer2.default]);
+var prefixer = new _inlineStylePrefixer2.default();
 
 var Flexbox = function (_React$Component) {
   _inherits(Flexbox, _React$Component);
@@ -40,7 +36,7 @@ var Flexbox = function (_React$Component) {
   _createClass(Flexbox, [{
     key: 'styles',
     value: function styles() {
-      return prefixer({
+      return prefixer.prefix({
         display: this.props.inline ? 'inline-flex' : 'flex',
         alignContent: this.props.alignContent,
         alignItems: this.props.alignItems,

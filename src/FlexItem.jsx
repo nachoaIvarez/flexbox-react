@@ -6,11 +6,16 @@ const prefixer = new Prefixer();
 class FlexItem extends React.Component {
   styles() {
     return prefixer.prefix({
-      order: this.props.order,
+      alignSelf: this.props.alignSelf,
+      flex: this.props.flex,
+      flexBasis: this.props.flexBasis,
       flexGrow: this.props.flexGrow,
       flexShrink: this.props.flexShrink,
-      flexBasis: this.props.flexBasis,
-      flex: this.props.flex,
+      height: this.props.height,
+      margin: this.props.margin,
+      order: this.props.order,
+      padding: this.props.padding,
+      width: this.props.width,
     });
   }
   render() {
@@ -23,11 +28,6 @@ class FlexItem extends React.Component {
 }
 
 FlexItem.propTypes = {
-  order: PropTypes.number,
-  flexGrow: PropTypes.number,
-  flexShrink: PropTypes.number,
-  flexBasis: PropTypes.string,
-  flex: PropTypes.string,
   alignSelf: PropTypes.oneOf([
     'flex-start',
     'flex-end',
@@ -36,6 +36,15 @@ FlexItem.propTypes = {
     'stretch',
   ]),
   children: React.PropTypes.node,
+  flex: PropTypes.string,
+  flexBasis: PropTypes.string,
+  flexGrow: PropTypes.number,
+  flexShrink: PropTypes.number,
+  height: PropTypes.string,
+  margin: PropTypes.string,
+  order: PropTypes.number,
+  padding: PropTypes.number,
+  width: PropTypes.string,
 };
 
 export default FlexItem;

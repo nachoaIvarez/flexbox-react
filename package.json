@@ -13,7 +13,7 @@
     "check": "npm run lint -s && dependency-check package.json --entry src",
     "watch": "watch 'npm run build' src test",
     "prebuild": "npm run check -s && npm run clean -s",
-    "build": "babel --optional runtime src -d dist",
+    "build": "babel --optional runtime src -d pre-dist; rollup pre-dist/index.js --output dist/index.js; rimraf pre-dist",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover test/index.js",
     "coveralls": "npm run coverage -s && coveralls < coverage/lcov.info",
     "postcoveralls": "rimraf ./coverage",
@@ -45,7 +45,6 @@
     "react-dom": "*"
   },
   "devDependencies": {
-    "autoprefixer": "*",
     "babel-cli": "*",
     "babel-core": "*",
     "babel-eslint": "*",
@@ -61,12 +60,12 @@
     "react": "*",
     "react-dom": "*",
     "rimraf": "*",
+    "rollup": "*",
     "tap-spec": "*",
     "tape": "*",
     "watch": "*"
   },
   "dependencies": {
-    "autoprefixer": "*",
-    "postcss-js": "*"
+    "inline-style-prefixer": "*"
   }
 }

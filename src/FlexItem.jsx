@@ -1,12 +1,11 @@
 import React, { PropTypes } from 'react';
-import autoprefixer from 'autoprefixer';
-import postcssJs from 'postcss-js';
+import Prefixer from 'inline-style-prefixer';
 
-const prefixer = postcssJs.sync([autoprefixer]);
+const prefixer = new Prefixer();
 
 class FlexItem extends React.Component {
   styles() {
-    return prefixer({
+    return prefixer.prefix({
       order: this.props.order,
       flexGrow: this.props.flexGrow,
       flexShrink: this.props.flexShrink,

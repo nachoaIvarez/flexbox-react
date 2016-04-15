@@ -26,7 +26,7 @@
 Unopinionated, standard compilant flexbox components. You don't need to learn any propietary syntax, classnames or API's. If you know how to use flexbox, you know how to use flexbox-react components.
 </big></p>
 <p align="center"><big>
-Finally, you get to see your code and figure out how are nodes laid out without jumping around between css files. Leave css files for the looks and actual aesthetics, not layout.
+Finally, you get to see your code and figure out how are nodes laid out without jumping between css files. Leave css files for the looks and actual aesthetics, not layout.
 </big></p>
 <p align="center"><big>
 No hardcoded, bloated, unnecesary vendor prefixes, by http://caniuse.com. And just what your browser needs! Based on your userAgent.

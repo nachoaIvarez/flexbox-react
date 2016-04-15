@@ -26,7 +26,7 @@
 Unopinionated, standard compilant flexbox components. You don&#39;t need to learn any propietary syntax, classnames or API's. If you know how to use flexbox, you know how to use flexbox-react components.
 </big></p>
 <p align="center"><big>
-No hardcoded/unnecesary vendor prefixes, by [caniuse](http://caniuse.com).
+No hardcoded/unnecesary vendor prefixes, by http://caniuse.com.
 </big></p>
 <p align="center"><big>
 No need to import any new stylesheet or to add any styles to your existing stylesheets. It works out of the box, just by using the component.

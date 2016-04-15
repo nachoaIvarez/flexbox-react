@@ -37,12 +37,16 @@ var Flexbox = function (_React$Component) {
     key: 'styles',
     value: function styles() {
       return prefixer.prefix({
-        display: this.props.inline ? 'inline-flex' : 'flex',
         alignContent: this.props.alignContent,
         alignItems: this.props.alignItems,
+        display: this.props.inline ? 'inline-flex' : 'flex',
         flexDirection: this.props.flexDirection,
+        flexWrap: this.props.flexWrap,
+        height: this.props.height,
         justifyContent: this.props.justifyContent,
-        flexWrap: this.props.flexWrap
+        margin: this.props.margin,
+        padding: this.props.padding,
+        width: this.props.width
       });
     }
   }, {
@@ -62,11 +66,15 @@ var Flexbox = function (_React$Component) {
 Flexbox.propTypes = {
   alignContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
   alignItems: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
+  children: _react2.default.PropTypes.node,
   flexDirection: _react.PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
-  justifyContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around']),
   flexWrap: _react.PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
+  height: _react.PropTypes.string,
   inline: _react.PropTypes.bool,
-  children: _react2.default.PropTypes.node
+  justifyContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around']),
+  margin: _react.PropTypes.string,
+  padding: _react.PropTypes.string,
+  width: _react.PropTypes.string
 };
 
 exports.default = Flexbox;

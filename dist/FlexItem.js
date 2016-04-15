@@ -37,11 +37,16 @@ var FlexItem = function (_React$Component) {
     key: 'styles',
     value: function styles() {
       return prefixer.prefix({
-        order: this.props.order,
+        alignSelf: this.props.alignSelf,
+        flex: this.props.flex,
+        flexBasis: this.props.flexBasis,
         flexGrow: this.props.flexGrow,
         flexShrink: this.props.flexShrink,
-        flexBasis: this.props.flexBasis,
-        flex: this.props.flex
+        height: this.props.height,
+        margin: this.props.margin,
+        order: this.props.order,
+        padding: this.props.padding,
+        width: this.props.width
       });
     }
   }, {
@@ -59,13 +64,17 @@ var FlexItem = function (_React$Component) {
 }(_react2.default.Component);
 
 FlexItem.propTypes = {
-  order: _react.PropTypes.number,
+  alignSelf: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
+  children: _react2.default.PropTypes.node,
+  flex: _react.PropTypes.string,
+  flexBasis: _react.PropTypes.string,
   flexGrow: _react.PropTypes.number,
   flexShrink: _react.PropTypes.number,
-  flexBasis: _react.PropTypes.string,
-  flex: _react.PropTypes.string,
-  alignSelf: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
-  children: _react2.default.PropTypes.node
+  height: _react.PropTypes.string,
+  margin: _react.PropTypes.string,
+  order: _react.PropTypes.number,
+  padding: _react.PropTypes.number,
+  width: _react.PropTypes.string
 };
 
 exports.default = FlexItem;

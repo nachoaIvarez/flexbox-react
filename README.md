@@ -48,7 +48,7 @@ npm install --save flexbox-react
 import { Flexbox, FlexItem } from "flexbox-react";
 
 //...
-<Flexbox alignItems="center" justifyContent="center" height="100vh" width="100vw">
+<Flexbox alignItems="center" justifyContent="center">
   <FlexItem>
     <h1>Hi!</h1>
   </FlexItem>

@@ -54,7 +54,7 @@ import { Flexbox, FlexItem } from "flexbox-react";
 
 ## License
 
-MIT © [](http://github.com/nachoaIvarez)
+MIT © [Ignacio Álvarez](http://github.com/nachoaIvarez)
 
 [npm-url]: https://npmjs.org/package/flexbox-react
 [npm-image]: https://img.shields.io/npm/v/flexbox-react.svg?style=flat-square

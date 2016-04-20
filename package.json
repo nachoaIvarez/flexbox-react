@@ -1,6 +1,6 @@
 {
   "name": "flexbox-react",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "Unopinionated, standard compilant flexbox components. You don&#39;t need to learn any propietary syntax. If you know how to use flexbox, you know how to use flexbox-react components.",
   "main": "dist/index.js",
   "files": [

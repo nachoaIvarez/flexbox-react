@@ -1,0 +1,5 @@
+@import '../_variables.css';
+
+.header {
+  background-color: $color-primary;
+}

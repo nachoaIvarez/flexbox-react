@@ -1,0 +1,72 @@
+var path = require('path');
+var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+module.exports = {
+  devtool: 'eval',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    './src/js/index',
+  ],
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'app.js',
+    publicPath: '/static/',
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin('app.css'),
+    new webpack.ProvidePlugin({
+      'React': 'react'
+    }),
+  ],
+  devtool: 'eval-source-map',
+  module: {
+    // Components
+    loaders: [
+      {
+        test: /\.js$/,
+        loaders: ['babel'],
+        include: path.join(__dirname, 'src/js'),
+      },
+
+      // Base styles
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('css!postcss'),
+        include: path.join(__dirname, 'src/css'),
+        exclude: path.join(__dirname, 'src/css/components')
+      },
+
+      // Component styles
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract(
+          'css' +
+            '?modules' +
+            '&importLoaders=1' +
+            '&localIdentName=[name]__[local]___[hash:base64:5]' +
+          '!postcss'
+        ),
+        include: path.join(__dirname, 'src/css/components')
+      },
+
+      // Vendor styles
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('css'),
+        exclude: path.join(__dirname, 'src/css')
+      }
+    ]
+  },
+  postcss: function () {
+      return [
+        require('precss'),
+        require('postcss-font-magician'),
+        require('postcss-short'),
+        require('autoprefixer')
+      ];
+  }
+};

@@ -54,7 +54,7 @@ var FlexItem = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { style: this.styles() },
+        { style: this.styles(), className: this.props.className },
         this.props.children
       );
     }
@@ -66,6 +66,7 @@ var FlexItem = function (_React$Component) {
 FlexItem.propTypes = {
   alignSelf: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
   children: _react2.default.PropTypes.node,
+  className: _react2.default.PropTypes.string,
   flex: _react.PropTypes.string,
   flexBasis: _react.PropTypes.string,
   flexGrow: _react.PropTypes.number,

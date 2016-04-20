@@ -54,7 +54,7 @@ var Flexbox = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { style: this.styles() },
+        { style: this.styles(), className: this.props.className },
         this.props.children
       );
     }
@@ -67,6 +67,7 @@ Flexbox.propTypes = {
   alignContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
   alignItems: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
   children: _react2.default.PropTypes.node,
+  className: _react2.default.PropTypes.string,
   flexDirection: _react.PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
   flexWrap: _react.PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
   height: _react.PropTypes.string,

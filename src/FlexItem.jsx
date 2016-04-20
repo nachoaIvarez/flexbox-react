@@ -20,7 +20,7 @@ class FlexItem extends React.Component {
   }
   render() {
     return (
-      <div style={this.styles()}>
+      <div style={this.styles()} className={this.props.className}>
         {this.props.children}
       </div>
     );
@@ -36,6 +36,7 @@ FlexItem.propTypes = {
     'stretch',
   ]),
   children: React.PropTypes.node,
+  className: React.PropTypes.string,
   flex: PropTypes.string,
   flexBasis: PropTypes.string,
   flexGrow: PropTypes.number,

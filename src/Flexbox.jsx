@@ -20,7 +20,7 @@ class Flexbox extends React.Component {
   }
   render() {
     return (
-      <div style={this.styles()}>
+      <div style={this.styles()} className={this.props.className}>
         {this.props.children}
       </div>
     );
@@ -44,6 +44,7 @@ Flexbox.propTypes = {
     'stretch',
   ]),
   children: React.PropTypes.node,
+  className: React.PropTypes.string,
   flexDirection: PropTypes.oneOf([
     'row',
     'row-reverse',

@@ -1,3 +1,19 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-overflow-scrolling: touch;
+  text-decoration: none;
+}
+
+body {
+  font-smooth: always;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

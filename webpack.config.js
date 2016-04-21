@@ -1,9 +1,9 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlwebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'eval',
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
@@ -12,19 +12,27 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'app.js',
-    publicPath: '/static/',
+    filename: 'app.[hash].js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('app.css'),
-    new webpack.ProvidePlugin({
-      'React': 'react'
+    new ExtractTextPlugin('app.[hash].css'),
+    new HtmlwebpackPlugin({
+      template: './index.html',
     }),
+    new webpack.ProvidePlugin({ React: 'react' }),
   ],
   devtool: 'eval-source-map',
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    progress: true,
+    stats: 'errors-only',
+    host: '0.0.0.0',
+    port: 3000,
+  },
   module: {
-    // Components
     loaders: [
       {
         test: /\.js$/,
@@ -37,7 +45,7 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('css!postcss'),
         include: path.join(__dirname, 'src/css'),
-        exclude: path.join(__dirname, 'src/css/components')
+        exclude: path.join(__dirname, 'src/css/components'),
       },
 
       // Component styles
@@ -50,23 +58,21 @@ module.exports = {
             '&localIdentName=[name]__[local]___[hash:base64:5]' +
           '!postcss'
         ),
-        include: path.join(__dirname, 'src/css/components')
+        include: path.join(__dirname, 'src/css/components'),
       },
 
       // Vendor styles
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('css'),
-        exclude: path.join(__dirname, 'src/css')
-      }
-    ]
+        exclude: path.join(__dirname, 'src/css'),
+      },
+    ],
   },
-  postcss: function () {
-      return [
-        require('precss'),
-        require('postcss-font-magician'),
-        require('postcss-short'),
-        require('autoprefixer')
-      ];
-  }
+  postcss: () => [
+    require('precss'),
+    require('postcss-font-magician'),
+    require('postcss-short'),
+    require('autoprefixer'),
+  ],
 };

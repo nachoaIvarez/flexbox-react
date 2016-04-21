@@ -3,7 +3,8 @@
   "version": "1.4.3",
   "description": "Unopinionated, standard compilant flexbox components. You don&#39;t need to learn any propietary syntax. If you know how to use flexbox, you know how to use flexbox-react components.",
   "scripts": {
-    "start": "node server.js",
+    "start": "webpack-dev-server",
+    "build": "webpack",
     "lint": "eslint src"
   },
   "repository": {
@@ -29,13 +30,14 @@
     "babel-plugin-module-alias": "^1.3.0",
     "babel-preset-es2015": "^6.0.15",
     "babel-preset-react": "^6.0.15",
-    "babel-preset-stage-0": "^6.0.15",
+    "browser-sync": "^2.12.3",
     "css-loader": "^0.23.1",
     "eslint": "*",
     "eslint-config-airbnb": "^7.0.0",
     "eslint-plugin-jsx-a11y": "^0.6.2",
     "eslint-plugin-react": "^4.3.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.16.0",
     "postcss-font-magician": "^1.4.0",
     "postcss-loader": "^0.8.2",
     "postcss-short": "^1.4.0",
@@ -43,10 +45,12 @@
     "react-hot-loader": "^3.0.0-alpha.9",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.12.1",
+    "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
-    "flexbox-react": "^1.4.3",
+    "flexbox-react": "^1.6.0",
     "normalize.css": "^4.1.1",
     "react": "^15.0.1",
     "react-dom": "^15.0.1"

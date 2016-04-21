@@ -1,5 +1,12 @@
-@import '../_variables.css';
+@import '../variables';
 
-.header {
-  background-color: $color-primary;
+.container {
+  background: linear-gradient(to right, $color-primary-dark, $color-primary , $color-primary-light);
+}
+
+.text {
+  color: $color-text-light;
+  font-size: 4.5vw;
+  font-weight: 666;
+  text-shadow: 1px 1px 4px $color-accent;
 }

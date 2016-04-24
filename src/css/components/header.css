@@ -1,12 +1,12 @@
 @import '../variables';
 
 .container {
-  background: linear-gradient(to right, $color-primary-dark, $color-primary , $color-primary-light);
+  background: linear-gradient(30deg, $color-primary-dark, $color-primary , $color-primary-light);
 }
 
 .text {
   color: $color-text-light;
-  font-size: 4.5vw;
+  font-size: 6.66vh;
   font-weight: 666;
   text-shadow: 1px 1px 4px $color-accent;
 }

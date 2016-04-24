@@ -45,6 +45,10 @@ var Flexbox = function (_React$Component) {
         height: this.props.height,
         justifyContent: this.props.justifyContent,
         margin: this.props.margin,
+        maxHeight: this.props.maxHeight,
+        minHeight: this.props.minHeight,
+        maxWidth: this.props.maxWidth,
+        minWidth: this.props.minWidth,
         padding: this.props.padding,
         width: this.props.width
       });
@@ -74,6 +78,10 @@ Flexbox.propTypes = {
   inline: _react.PropTypes.bool,
   justifyContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around']),
   margin: _react.PropTypes.string,
+  maxHeight: _react.PropTypes.string,
+  minHeight: _react.PropTypes.string,
+  maxWidth: _react.PropTypes.string,
+  minWidth: _react.PropTypes.string,
   padding: _react.PropTypes.string,
   width: _react.PropTypes.string
 };

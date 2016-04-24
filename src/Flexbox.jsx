@@ -14,6 +14,10 @@ class Flexbox extends React.Component {
       height: this.props.height,
       justifyContent: this.props.justifyContent,
       margin: this.props.margin,
+      maxHeight: this.props.maxHeight,
+      minHeight: this.props.minHeight,
+      maxWidth: this.props.maxWidth,
+      minWidth: this.props.minWidth,
       padding: this.props.padding,
       width: this.props.width,
     });
@@ -66,6 +70,10 @@ Flexbox.propTypes = {
     'space-around',
   ]),
   margin: PropTypes.string,
+  maxHeight: PropTypes.string,
+  minHeight: PropTypes.string,
+  maxWidth: PropTypes.string,
+  minWidth: PropTypes.string,
   padding: PropTypes.string,
   width: PropTypes.string,
 };

@@ -44,6 +44,10 @@ var FlexItem = function (_React$Component) {
         flexShrink: this.props.flexShrink,
         height: this.props.height,
         margin: this.props.margin,
+        maxHeight: this.props.maxHeight,
+        minHeight: this.props.minHeight,
+        maxWidth: this.props.maxWidth,
+        minWidth: this.props.minWidth,
         order: this.props.order,
         padding: this.props.padding,
         width: this.props.width
@@ -73,6 +77,10 @@ FlexItem.propTypes = {
   flexShrink: _react.PropTypes.number,
   height: _react.PropTypes.string,
   margin: _react.PropTypes.string,
+  maxHeight: _react.PropTypes.string,
+  minHeight: _react.PropTypes.string,
+  maxWidth: _react.PropTypes.string,
+  minWidth: _react.PropTypes.string,
   order: _react.PropTypes.number,
   padding: _react.PropTypes.number,
   width: _react.PropTypes.string

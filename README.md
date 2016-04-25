@@ -81,6 +81,8 @@ import { Flexbox, FlexItem } from "flexbox-react";
 ```
 *Sticky footer!*
 
+As you can see, there's some helpers in order to build your layouts. Those are `height`, `minHeight`, `maxHeight`, `width`, `minHeight`, `maxHeight`, `padding` and `margin`. The idea of `flexbox-react` is to be a complete solution to build layouts. Feel free to create an issue or submit a PR if you think there's room for imprevement here!
+
 ## Props
 Take a look at
 [Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L30)

@@ -81,7 +81,7 @@ import { Flexbox, FlexItem } from "flexbox-react";
 ```
 *Sticky footer!*
 
-As you can see, there's some extra props as layouting helpers. Those are `height`, `minHeight`, `maxHeight`, `width`, `minHeight`, `maxHeight`, `padding` and `margin`. The idea of `flexbox-react` is to be a complete solution to build layouts. Feel free to create an issue or submit a PR if you think there's room for improvement here!
+As you can see, there's some extra props as layouting helpers. Those are `height`, `minHeight`, `maxHeight`, `width`, `minWidth`, `maxWidth`, `padding` and `margin`. The idea of `flexbox-react` is to be a complete solution to build layouts. Feel free to create an issue or submit a PR if you think there's room for improvement here!
 
 ## Props
 Take a look at

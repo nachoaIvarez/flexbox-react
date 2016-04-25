@@ -23,7 +23,7 @@
 </p>
 
 
-## What
+## Intro
 Unopinionated, standard compilant flexbox components.
 
 ## Why

@@ -4,7 +4,7 @@
   ],
   "plugins": [
     ["babel-plugin-module-alias", [
-      { "src": "./src", "expose": "~" },
+      { "src": "./", "expose": "~" },
     ]]
   ]
 }

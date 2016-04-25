@@ -34,10 +34,23 @@ module.exports = {
   },
   module: {
     loaders: [
+      // Components
       {
         test: /\.js$/,
-        loaders: ['babel'],
+        loader: 'babel',
         include: path.join(__dirname, 'src/js'),
+      },
+
+      // Markdown as plain text
+      {
+        test: /\.md$/,
+        loader: 'text',
+      },
+
+      // JSON
+      {
+        test: /\.json$/,
+        loader: 'json',
       },
 
       // Base styles

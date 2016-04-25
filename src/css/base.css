@@ -1,3 +1,5 @@
+@import 'variables';
+
 *,
 *::before,
 *::after {
@@ -11,12 +13,30 @@
 body {
   color: $color-primary-text;
   font-family: 'Lato', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-smooth: always;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  line-height: 1.666em;
 }
 
+pre,
 code {
-  color: $color-accent;
+  background-color: $color-primary-background;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+pre {
+  padding: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  border-bottom: 1px solid #FFEFEF;
+  color: $color-primary-dark;
 }

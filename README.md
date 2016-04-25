@@ -1,29 +1,4 @@
-<big><h1 align="center">flexbox-react</h1></big>
-
-<p align="center">
-  <a href="https://npmjs.org/package/flexbox-react">
-    <img src="https://img.shields.io/npm/v/flexbox-react.svg?style=flat-square"
-         alt="NPM Version">
-  </a>
-
-  <a href="https://npmjs.org/package/flexbox-react">
-    <img src="http://img.shields.io/npm/dm/flexbox-react.svg?style=flat-square"
-         alt="Downloads">
-  </a>
-
-  <a href="https://david-dm.org/nachoaIvarez/flexbox-react.svg">
-    <img src="https://david-dm.org/nachoaIvarez/flexbox-react.svg?style=flat-square"
-         alt="Dependency Status">
-  </a>
-
-  <a href="https://github.com/nachoaIvarez/flexbox-react/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/flexbox-react.svg?style=flat-square"
-         alt="License">
-  </a>
-</p>
-
-
-## What
+## Intro
 Unopinionated, standard compilant flexbox components.
 
 ## Why
@@ -86,15 +61,3 @@ Take a look at
 [Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L30)
 and [FlexItem PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/FlexItem.jsx#L30). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
 [good starting point](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
-
-## License
-
-MIT © [Ignacio Álvarez](http://github.com/nachoaIvarez)
-
-[npm-url]: https://npmjs.org/package/flexbox-react
-[npm-image]: https://img.shields.io/npm/v/flexbox-react.svg?style=flat-square
-
-[depstat-url]: https://david-dm.org/nachoaIvarez/flexbox-react
-[depstat-image]: https://david-dm.org/nachoaIvarez/flexbox-react.svg?style=flat-square
-
-[download-badge]: http://img.shields.io/npm/dm/flexbox-react.svg?style=flat-square

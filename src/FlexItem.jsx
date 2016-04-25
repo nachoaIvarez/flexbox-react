@@ -52,7 +52,7 @@ FlexItem.propTypes = {
   maxWidth: PropTypes.string,
   minWidth: PropTypes.string,
   order: PropTypes.number,
-  padding: PropTypes.number,
+  padding: PropTypes.string,
   width: PropTypes.string,
 };
 

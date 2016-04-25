@@ -6,7 +6,7 @@
 
 .text {
   color: $color-text-light;
-  font-size: 6.66vh;
+  font-size: 7vh;
   font-weight: 666;
   text-shadow: 1px 1px 4px $color-accent;
 }

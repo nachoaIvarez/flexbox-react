@@ -1,0 +1,5 @@
+@import '../variables';
+
+.container {
+  background: linear-gradient(-30deg, $color-primary-dark, $color-primary , $color-primary-light);
+}

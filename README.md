@@ -61,3 +61,7 @@ Take a look at
 [Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L30)
 and [FlexItem PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/FlexItem.jsx#L30). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
 [good starting point](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+
+## License
+
+MIT © [Ignacio Álvarez](http://github.com/nachoaIvarez)

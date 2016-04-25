@@ -39,4 +39,9 @@ h5,
 h5 {
   border-bottom: 1px solid #FFEFEF;
   color: $color-primary-dark;
+  padding-bottom: 10px;
+}
+
+a {
+  color: $color-primary;
 }

@@ -82,7 +82,7 @@ FlexItem.propTypes = {
   maxWidth: _react.PropTypes.string,
   minWidth: _react.PropTypes.string,
   order: _react.PropTypes.number,
-  padding: _react.PropTypes.number,
+  padding: _react.PropTypes.string,
   width: _react.PropTypes.string
 };
 

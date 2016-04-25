@@ -50,9 +50,10 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
-    "flexbox-react": "^1.6.0",
+    "flexbox-react": "^1.7.0",
     "normalize.css": "^4.1.1",
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "react-markdown": "^2.2.0"
   }
 }

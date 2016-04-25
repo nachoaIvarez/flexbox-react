@@ -1,5 +1,8 @@
-import { PropTypes } from 'React';
 import { Flexbox, FlexItem } from 'flexbox-react';
+import { PropTypes } from 'React';
+
+import '~/css/base.css';
+import 'normalize.css';
 import header from '~/css/components/header.css';
 
 const Layout = ({ children }) =>
@@ -19,7 +22,7 @@ const Layout = ({ children }) =>
         frameBorder="0" scrolling="0" width="160px" height="30px"
       ></iframe>
     </Flexbox>
-    <FlexItem padding="40px" maxWidth="666px" >{children}</FlexItem>
+    <FlexItem padding="40px" maxWidth="666px">{children}</FlexItem>
   </Flexbox>);
 
 Layout.propTypes = {

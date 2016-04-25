@@ -72,7 +72,6 @@ module.exports = {
   postcss: () => [
     require('precss'),
     require('postcss-font-magician'),
-    require('postcss-short'),
     require('autoprefixer'),
   ],
 };

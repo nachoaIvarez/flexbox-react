@@ -9,9 +9,14 @@
 }
 
 body {
+  color: $color-primary-text;
   font-family: 'Lato', sans-serif;
   font-size: 1.3em;
   font-smooth: always;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+code {
+  color: $color-accent;
 }

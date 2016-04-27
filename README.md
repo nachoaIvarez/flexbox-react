@@ -5,7 +5,7 @@ Unopinionated, standard compilant flexbox components.
 You should not learn any propietary syntax, classnames or API's.
 If you know how to use flexbox, you know how to use `flexbox-react` components.
 
-No more `<Box>`, `<SpacedBox>`, `<Column>`, `<View>`, `<Section>` or any other
+No more `<Container>`, `<SpacedBox>`, `<Column>`, `<View>`, `<Section>` or any other
 arbitrarily named and _spec_&hairsp;ed components to layout your apps.
 
 No more `first={true}`, `ternary={true}`, `spaced={true}`,`grouped={true}`

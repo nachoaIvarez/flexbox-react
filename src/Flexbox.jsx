@@ -5,26 +5,46 @@ const prefixer = new Prefixer();
 
 class Flexbox extends React.Component {
   styles() {
+    const {
+      alignContent,
+      alignItems,
+      flexDirection,
+      flexWrap,
+      height,
+      justifyContent,
+      margin,
+      maxHeight,
+      minHeight,
+      maxWidth,
+      minWidth,
+      padding,
+      width,
+      inline,
+      ...props
+    } = this.props;
+
+    const display = this.props.inline ? 'inline-flex' : 'flex';
+
     return prefixer.prefix({
-      alignContent: this.props.alignContent,
-      alignItems: this.props.alignItems,
-      display: this.props.inline ? 'inline-flex' : 'flex',
-      flexDirection: this.props.flexDirection,
-      flexWrap: this.props.flexWrap,
-      height: this.props.height,
-      justifyContent: this.props.justifyContent,
-      margin: this.props.margin,
-      maxHeight: this.props.maxHeight,
-      minHeight: this.props.minHeight,
-      maxWidth: this.props.maxWidth,
-      minWidth: this.props.minWidth,
-      padding: this.props.padding,
-      width: this.props.width,
+      alignContent,
+      alignItems,
+      display,
+      flexDirection,
+      flexWrap,
+      height,
+      justifyContent,
+      margin,
+      maxHeight,
+      minHeight,
+      maxWidth,
+      minWidth,
+      padding,
+      width,
     });
   }
   render() {
     return (
-      <div style={this.styles()} className={this.props.className}>
+      <div {...props} style={this.styles()}>
         {this.props.children}
       </div>
     );
@@ -48,7 +68,6 @@ Flexbox.propTypes = {
     'stretch',
   ]),
   children: React.PropTypes.node,
-  className: React.PropTypes.string,
   flexDirection: PropTypes.oneOf([
     'row',
     'row-reverse',

@@ -5,26 +5,44 @@ const prefixer = new Prefixer();
 
 class FlexItem extends React.Component {
   styles() {
+    const {
+      alignSelf,
+      flex,
+      flexBasis,
+      flexGrow,
+      flexShrink,
+      height,
+      margin,
+      maxHeight,
+      minHeight,
+      maxWidth,
+      minWidth,
+      order,
+      padding,
+      width,
+      ...props
+    } = this.props;
+
     return prefixer.prefix({
-      alignSelf: this.props.alignSelf,
-      flex: this.props.flex,
-      flexBasis: this.props.flexBasis,
-      flexGrow: this.props.flexGrow,
-      flexShrink: this.props.flexShrink,
-      height: this.props.height,
-      margin: this.props.margin,
-      maxHeight: this.props.maxHeight,
-      minHeight: this.props.minHeight,
-      maxWidth: this.props.maxWidth,
-      minWidth: this.props.minWidth,
-      order: this.props.order,
-      padding: this.props.padding,
-      width: this.props.width,
+      alignSelf,
+      flex,
+      flexBasis,
+      flexGrow,
+      flexShrink,
+      height,
+      margin,
+      maxHeight,
+      minHeight,
+      maxWidth,
+      minWidth,
+      order,
+      padding,
+      width
     });
   }
   render() {
     return (
-      <div style={this.styles()} className={this.props.className}>
+      <div {...props} style={this.styles()}>
         {this.props.children}
       </div>
     );
@@ -40,7 +58,6 @@ FlexItem.propTypes = {
     'stretch',
   ]),
   children: React.PropTypes.node,
-  className: React.PropTypes.string,
   flex: PropTypes.string,
   flexBasis: PropTypes.string,
   flexGrow: PropTypes.number,

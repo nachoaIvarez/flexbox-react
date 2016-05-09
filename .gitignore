@@ -4,5 +4,4 @@ logs
 node_modules
 tmp
 coverage
-dist
 npm-debug.log

@@ -43,7 +43,7 @@ const FlexItem = (props) => {
 
   return (
     <div {...other} style={styles}>
-      {this.props.children}
+      {props.children}
     </div>
   );
 };

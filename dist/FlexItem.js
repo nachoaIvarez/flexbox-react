@@ -59,7 +59,7 @@ var FlexItem = function FlexItem(props) {
   return _react2.default.createElement(
     'div',
     _extends({}, other, { style: styles }),
-    undefined.props.children
+    props.children
   );
 };
 

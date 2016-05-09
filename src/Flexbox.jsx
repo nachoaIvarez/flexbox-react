@@ -3,53 +3,52 @@ import Prefixer from 'inline-style-prefixer';
 
 const prefixer = new Prefixer();
 
-class Flexbox extends React.Component {
-  styles() {
-    const {
-      alignContent,
-      alignItems,
-      flexDirection,
-      flexWrap,
-      height,
-      justifyContent,
-      margin,
-      maxHeight,
-      minHeight,
-      maxWidth,
-      minWidth,
-      padding,
-      width,
-      inline,
-      ...props
-    } = this.props;
+const Flexbox = (props) => {
+  const {
+    style,
+    alignContent,
+    alignItems,
+    flexDirection,
+    flexWrap,
+    height,
+    justifyContent,
+    margin,
+    maxHeight,
+    minHeight,
+    maxWidth,
+    minWidth,
+    padding,
+    width,
+    inline,
+    ...other,
+  } = props;
 
-    const display = this.props.inline ? 'inline-flex' : 'flex';
+  const display = inline ? 'inline-flex' : 'flex';
 
-    return prefixer.prefix({
-      alignContent,
-      alignItems,
-      display,
-      flexDirection,
-      flexWrap,
-      height,
-      justifyContent,
-      margin,
-      maxHeight,
-      minHeight,
-      maxWidth,
-      minWidth,
-      padding,
-      width,
-    });
-  }
-  render() {
-    return (
-      <div {...props} style={this.styles()}>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+  const styles = prefixer.prefix({
+    ...style,
+    alignContent,
+    alignItems,
+    display,
+    flexDirection,
+    flexWrap,
+    height,
+    justifyContent,
+    margin,
+    maxHeight,
+    minHeight,
+    maxWidth,
+    minWidth,
+    padding,
+    width,
+  });
+
+  return (
+    <div {...other} style={styles}>
+      {this.props.children}
+    </div>
+  );
+};
 
 Flexbox.propTypes = {
   alignContent: PropTypes.oneOf([
@@ -94,6 +93,7 @@ Flexbox.propTypes = {
   maxWidth: PropTypes.string,
   minWidth: PropTypes.string,
   padding: PropTypes.string,
+  style: PropTypes.object,
   width: PropTypes.string,
 };
 

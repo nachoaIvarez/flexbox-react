@@ -3,51 +3,50 @@ import Prefixer from 'inline-style-prefixer';
 
 const prefixer = new Prefixer();
 
-class FlexItem extends React.Component {
-  styles() {
-    const {
-      alignSelf,
-      flex,
-      flexBasis,
-      flexGrow,
-      flexShrink,
-      height,
-      margin,
-      maxHeight,
-      minHeight,
-      maxWidth,
-      minWidth,
-      order,
-      padding,
-      width,
-      ...props
-    } = this.props;
+const FlexItem = (props) => {
+  const {
+    style,
+    alignSelf,
+    flex,
+    flexBasis,
+    flexGrow,
+    flexShrink,
+    height,
+    margin,
+    maxHeight,
+    minHeight,
+    maxWidth,
+    minWidth,
+    order,
+    padding,
+    width,
+    ...other,
+  } = props;
 
-    return prefixer.prefix({
-      alignSelf,
-      flex,
-      flexBasis,
-      flexGrow,
-      flexShrink,
-      height,
-      margin,
-      maxHeight,
-      minHeight,
-      maxWidth,
-      minWidth,
-      order,
-      padding,
-      width
-    });
-  }
-  render() {
-    return (
-      <div {...props} style={this.styles()}>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+  const styles = prefixer.prefix({
+    ...style,
+    alignSelf,
+    flex,
+    flexBasis,
+    flexGrow,
+    flexShrink,
+    height,
+    margin,
+    maxHeight,
+    minHeight,
+    maxWidth,
+    minWidth,
+    order,
+    padding,
+    width,
+  });
+
+  return (
+    <div {...other} style={styles}>
+      {this.props.children}
+    </div>
+  );
+};
 
 FlexItem.propTypes = {
   alignSelf: PropTypes.oneOf([
@@ -70,6 +69,7 @@ FlexItem.propTypes = {
   minWidth: PropTypes.string,
   order: PropTypes.number,
   padding: PropTypes.string,
+  style: PropTypes.object,
   width: PropTypes.string,
 };
 

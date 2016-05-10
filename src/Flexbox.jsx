@@ -3,33 +3,52 @@ import Prefixer from 'inline-style-prefixer';
 
 const prefixer = new Prefixer();
 
-class Flexbox extends React.Component {
-  styles() {
-    return prefixer.prefix({
-      alignContent: this.props.alignContent,
-      alignItems: this.props.alignItems,
-      display: this.props.inline ? 'inline-flex' : 'flex',
-      flexDirection: this.props.flexDirection,
-      flexWrap: this.props.flexWrap,
-      height: this.props.height,
-      justifyContent: this.props.justifyContent,
-      margin: this.props.margin,
-      maxHeight: this.props.maxHeight,
-      minHeight: this.props.minHeight,
-      maxWidth: this.props.maxWidth,
-      minWidth: this.props.minWidth,
-      padding: this.props.padding,
-      width: this.props.width,
-    });
-  }
-  render() {
-    return (
-      <div style={this.styles()} className={this.props.className}>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const Flexbox = (props) => {
+  const {
+    style,
+    alignContent,
+    alignItems,
+    flexDirection,
+    flexWrap,
+    height,
+    justifyContent,
+    margin,
+    maxHeight,
+    minHeight,
+    maxWidth,
+    minWidth,
+    padding,
+    width,
+    inline,
+    ...other,
+  } = props;
+
+  const display = inline ? 'inline-flex' : 'flex';
+
+  const styles = prefixer.prefix({
+    ...style,
+    alignContent,
+    alignItems,
+    display,
+    flexDirection,
+    flexWrap,
+    height,
+    justifyContent,
+    margin,
+    maxHeight,
+    minHeight,
+    maxWidth,
+    minWidth,
+    padding,
+    width,
+  });
+
+  return (
+    <div {...other} style={styles}>
+      {props.children}
+    </div>
+  );
+};
 
 Flexbox.propTypes = {
   alignContent: PropTypes.oneOf([
@@ -48,7 +67,6 @@ Flexbox.propTypes = {
     'stretch',
   ]),
   children: React.PropTypes.node,
-  className: React.PropTypes.string,
   flexDirection: PropTypes.oneOf([
     'row',
     'row-reverse',
@@ -75,6 +93,7 @@ Flexbox.propTypes = {
   maxWidth: PropTypes.string,
   minWidth: PropTypes.string,
   padding: PropTypes.string,
+  style: PropTypes.object,
   width: PropTypes.string,
 };
 

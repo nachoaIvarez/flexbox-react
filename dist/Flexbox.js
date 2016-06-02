@@ -21,23 +21,31 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 var prefixer = new _inlineStylePrefixer2.default();
 
 var Flexbox = function Flexbox(props) {
-  var style = props.style;
   var alignContent = props.alignContent;
   var alignItems = props.alignItems;
   var flexDirection = props.flexDirection;
   var flexWrap = props.flexWrap;
   var height = props.height;
+  var inline = props.inline;
   var justifyContent = props.justifyContent;
   var margin = props.margin;
+  var marginBottom = props.marginBottom;
+  var marginLeft = props.marginLeft;
+  var marginRight = props.marginRight;
+  var marginTop = props.marginTop;
   var maxHeight = props.maxHeight;
-  var minHeight = props.minHeight;
   var maxWidth = props.maxWidth;
+  var minHeight = props.minHeight;
   var minWidth = props.minWidth;
   var padding = props.padding;
+  var paddingBottom = props.paddingBottom;
+  var paddingLeft = props.paddingLeft;
+  var paddingRight = props.paddingRight;
+  var paddingTop = props.paddingTop;
+  var style = props.style;
   var width = props.width;
-  var inline = props.inline;
 
-  var other = _objectWithoutProperties(props, ['style', 'alignContent', 'alignItems', 'flexDirection', 'flexWrap', 'height', 'justifyContent', 'margin', 'maxHeight', 'minHeight', 'maxWidth', 'minWidth', 'padding', 'width', 'inline']);
+  var other = _objectWithoutProperties(props, ['alignContent', 'alignItems', 'flexDirection', 'flexWrap', 'height', 'inline', 'justifyContent', 'margin', 'marginBottom', 'marginLeft', 'marginRight', 'marginTop', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'padding', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop', 'style', 'width']);
 
   var display = inline ? 'inline-flex' : 'flex';
 
@@ -50,11 +58,19 @@ var Flexbox = function Flexbox(props) {
     height: height,
     justifyContent: justifyContent,
     margin: margin,
+    marginBottom: marginBottom,
+    marginLeft: marginLeft,
+    marginRight: marginRight,
+    marginTop: marginTop,
     maxHeight: maxHeight,
     minHeight: minHeight,
     maxWidth: maxWidth,
     minWidth: minWidth,
     padding: padding,
+    paddingBottom: paddingBottom,
+    paddingLeft: paddingLeft,
+    paddingRight: paddingRight,
+    paddingTop: paddingTop,
     width: width
   }));
 
@@ -75,11 +91,19 @@ Flexbox.propTypes = {
   inline: _react.PropTypes.bool,
   justifyContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around']),
   margin: _react.PropTypes.string,
+  marginBottom: _react.PropTypes.string,
+  marginLeft: _react.PropTypes.string,
+  marginRight: _react.PropTypes.string,
+  marginTop: _react.PropTypes.string,
   maxHeight: _react.PropTypes.string,
-  minHeight: _react.PropTypes.string,
   maxWidth: _react.PropTypes.string,
+  minHeight: _react.PropTypes.string,
   minWidth: _react.PropTypes.string,
   padding: _react.PropTypes.string,
+  paddingBottom: _react.PropTypes.string,
+  paddingLeft: _react.PropTypes.string,
+  paddingRight: _react.PropTypes.string,
+  paddingTop: _react.PropTypes.string,
   style: _react.PropTypes.object,
   width: _react.PropTypes.string
 };

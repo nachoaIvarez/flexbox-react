@@ -21,7 +21,6 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 var prefixer = new _inlineStylePrefixer2.default();
 
 var FlexItem = function FlexItem(props) {
-  var style = props.style;
   var alignSelf = props.alignSelf;
   var flex = props.flex;
   var flexBasis = props.flexBasis;
@@ -29,15 +28,24 @@ var FlexItem = function FlexItem(props) {
   var flexShrink = props.flexShrink;
   var height = props.height;
   var margin = props.margin;
+  var marginBottom = props.marginBottom;
+  var marginLeft = props.marginLeft;
+  var marginRight = props.marginRight;
+  var marginTop = props.marginTop;
   var maxHeight = props.maxHeight;
-  var minHeight = props.minHeight;
   var maxWidth = props.maxWidth;
+  var minHeight = props.minHeight;
   var minWidth = props.minWidth;
   var order = props.order;
   var padding = props.padding;
+  var paddingBottom = props.paddingBottom;
+  var paddingLeft = props.paddingLeft;
+  var paddingRight = props.paddingRight;
+  var paddingTop = props.paddingTop;
+  var style = props.style;
   var width = props.width;
 
-  var other = _objectWithoutProperties(props, ['style', 'alignSelf', 'flex', 'flexBasis', 'flexGrow', 'flexShrink', 'height', 'margin', 'maxHeight', 'minHeight', 'maxWidth', 'minWidth', 'order', 'padding', 'width']);
+  var other = _objectWithoutProperties(props, ['alignSelf', 'flex', 'flexBasis', 'flexGrow', 'flexShrink', 'height', 'margin', 'marginBottom', 'marginLeft', 'marginRight', 'marginTop', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'order', 'padding', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop', 'style', 'width']);
 
   var styles = prefixer.prefix(_extends({}, style, {
     alignSelf: alignSelf,
@@ -47,12 +55,20 @@ var FlexItem = function FlexItem(props) {
     flexShrink: flexShrink,
     height: height,
     margin: margin,
+    marginBottom: marginBottom,
+    marginLeft: marginLeft,
+    marginRight: marginRight,
+    marginTop: marginTop,
     maxHeight: maxHeight,
-    minHeight: minHeight,
     maxWidth: maxWidth,
+    minHeight: minHeight,
     minWidth: minWidth,
     order: order,
     padding: padding,
+    paddingBottom: paddingBottom,
+    paddingLeft: paddingLeft,
+    paddingRight: paddingRight,
+    paddingTop: paddingTop,
     width: width
   }));
 
@@ -72,12 +88,20 @@ FlexItem.propTypes = {
   flexShrink: _react.PropTypes.number,
   height: _react.PropTypes.string,
   margin: _react.PropTypes.string,
+  marginBottom: _react.PropTypes.string,
+  marginLeft: _react.PropTypes.string,
+  marginRight: _react.PropTypes.string,
+  marginTop: _react.PropTypes.string,
   maxHeight: _react.PropTypes.string,
-  minHeight: _react.PropTypes.string,
   maxWidth: _react.PropTypes.string,
+  minHeight: _react.PropTypes.string,
   minWidth: _react.PropTypes.string,
   order: _react.PropTypes.number,
   padding: _react.PropTypes.string,
+  paddingBottom: _react.PropTypes.string,
+  paddingLeft: _react.PropTypes.string,
+  paddingRight: _react.PropTypes.string,
+  paddingTop: _react.PropTypes.string,
   style: _react.PropTypes.object,
   width: _react.PropTypes.string
 };

@@ -56,22 +56,22 @@ npm install --save flexbox-react
 
 ## Usage
 ```js
-import { Flexbox, FlexItem } from "flexbox-react";
+import Flexbox from 'flexbox-react';
 
 //...
 <Flexbox flexDirection="column" minHeight="100vw">
 
-  <FlexItem height="60px">
+  <Flexbox height="60px">
     Header
-  </FlexItem>
+  </Flexbox>
 
-  <FlexItem flexGrow={1}>
+  <Flexbox flexGrow={1}>
     Content
-  </FlexItem>
+  </Flexbox>
 
-  <FlexItem height="60px">
+  <Flexbox height="60px">
     Footer
-  </FlexItem>
+  </Flexbox>
 
 </Flexbox>
 ```
@@ -81,8 +81,7 @@ As you can see, there's some extra props as _layout_&hairsp;ing helpers. Those a
 
 ## Props
 Take a look at
-[Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L30)
-and [FlexItem PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/FlexItem.jsx#L30). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
+[Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L30). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
 [good starting point](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 ## License

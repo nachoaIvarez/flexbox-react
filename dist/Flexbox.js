@@ -23,7 +23,12 @@ var prefixer = new _inlineStylePrefixer2.default();
 var Flexbox = function Flexbox(props) {
   var alignContent = props.alignContent;
   var alignItems = props.alignItems;
+  var alignSelf = props.alignSelf;
+  var flex = props.flex;
+  var flexBasis = props.flexBasis;
   var flexDirection = props.flexDirection;
+  var flexGrow = props.flexGrow;
+  var flexShrink = props.flexShrink;
   var flexWrap = props.flexWrap;
   var height = props.height;
   var inline = props.inline;
@@ -37,6 +42,7 @@ var Flexbox = function Flexbox(props) {
   var maxWidth = props.maxWidth;
   var minHeight = props.minHeight;
   var minWidth = props.minWidth;
+  var order = props.order;
   var padding = props.padding;
   var paddingBottom = props.paddingBottom;
   var paddingLeft = props.paddingLeft;
@@ -45,15 +51,20 @@ var Flexbox = function Flexbox(props) {
   var style = props.style;
   var width = props.width;
 
-  var other = _objectWithoutProperties(props, ['alignContent', 'alignItems', 'flexDirection', 'flexWrap', 'height', 'inline', 'justifyContent', 'margin', 'marginBottom', 'marginLeft', 'marginRight', 'marginTop', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'padding', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop', 'style', 'width']);
+  var other = _objectWithoutProperties(props, ['alignContent', 'alignItems', 'alignSelf', 'flex', 'flexBasis', 'flexDirection', 'flexGrow', 'flexShrink', 'flexWrap', 'height', 'inline', 'justifyContent', 'margin', 'marginBottom', 'marginLeft', 'marginRight', 'marginTop', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'order', 'padding', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop', 'style', 'width']);
 
   var display = inline ? 'inline-flex' : 'flex';
 
   var styles = prefixer.prefix(_extends({}, style, {
     alignContent: alignContent,
     alignItems: alignItems,
+    alignSelf: alignSelf,
     display: display,
+    flex: flex,
+    flexBasis: flexBasis,
     flexDirection: flexDirection,
+    flexGrow: flexGrow,
+    flexShrink: flexShrink,
     flexWrap: flexWrap,
     height: height,
     justifyContent: justifyContent,
@@ -63,9 +74,10 @@ var Flexbox = function Flexbox(props) {
     marginRight: marginRight,
     marginTop: marginTop,
     maxHeight: maxHeight,
-    minHeight: minHeight,
     maxWidth: maxWidth,
+    minHeight: minHeight,
     minWidth: minWidth,
+    order: order,
     padding: padding,
     paddingBottom: paddingBottom,
     paddingLeft: paddingLeft,
@@ -85,7 +97,12 @@ Flexbox.propTypes = {
   alignContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
   alignItems: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
   children: _react2.default.PropTypes.node,
+  flex: _react.PropTypes.string,
+  flexBasis: _react.PropTypes.string,
   flexDirection: _react.PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
+  flexGrow: _react.PropTypes.number,
+  flexShrink: _react.PropTypes.number,
+  alignSelf: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
   flexWrap: _react.PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
   height: _react.PropTypes.string,
   inline: _react.PropTypes.bool,
@@ -99,6 +116,7 @@ Flexbox.propTypes = {
   maxWidth: _react.PropTypes.string,
   minHeight: _react.PropTypes.string,
   minWidth: _react.PropTypes.string,
+  order: _react.PropTypes.number,
   padding: _react.PropTypes.string,
   paddingBottom: _react.PropTypes.string,
   paddingLeft: _react.PropTypes.string,

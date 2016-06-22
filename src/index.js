@@ -1,4 +1,1 @@
-import Flexbox from './Flexbox';
-import FlexItem from './FlexItem';
-
-export { Flexbox, FlexItem };
+export default from './Flexbox';

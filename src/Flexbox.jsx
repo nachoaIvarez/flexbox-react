@@ -40,7 +40,6 @@ const Flexbox = (props) => {
   const display = inline ? 'inline-flex' : 'flex';
 
   const styles = prefixer.prefix({
-    ...style,
     alignContent,
     alignItems,
     alignSelf,
@@ -69,6 +68,7 @@ const Flexbox = (props) => {
     paddingRight,
     paddingTop,
     width,
+    ...style,
   });
 
   return (

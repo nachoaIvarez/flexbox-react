@@ -55,7 +55,7 @@ var Flexbox = function Flexbox(props) {
 
   var display = inline ? 'inline-flex' : 'flex';
 
-  var styles = prefixer.prefix(_extends({}, style, {
+  var styles = prefixer.prefix(_extends({
     alignContent: alignContent,
     alignItems: alignItems,
     alignSelf: alignSelf,
@@ -84,7 +84,7 @@ var Flexbox = function Flexbox(props) {
     paddingRight: paddingRight,
     paddingTop: paddingTop,
     width: width
-  }));
+  }, style));
 
   return _react2.default.createElement(
     'div',

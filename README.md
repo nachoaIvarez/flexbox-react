@@ -66,7 +66,7 @@ import Flexbox from 'flexbox-react';
 //...
 <Flexbox flexDirection="column" minHeight="100vw">
 
-  <Flexbox height="60px">
+  <Flexbox element="header" height="60px">
     Header
   </Flexbox>
 
@@ -74,7 +74,7 @@ import Flexbox from 'flexbox-react';
     Content
   </Flexbox>
 
-  <Flexbox height="60px">
+  <Flexbox element="footer" height="60px">
     Footer
   </Flexbox>
 
@@ -89,7 +89,7 @@ As you can see, there's some extra props as _layout_&hairsp;ing helpers. Those a
 If you need to use a tag other than `<div>` for the layout, like `<header>` or `<section>`, you can pass an extra `element` prop to the `<Flexbox />` component:
 
 ```html
-Flexbox element="header" height="80px">
+<Flexbox element="header" height="80px">
   ...
 </Flexbox>
 ```
@@ -104,7 +104,7 @@ which will render to this:
 
 ## Props
 Take a look at
-[Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L30). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
+[Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L82-L157). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
 [good starting point](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 ## License

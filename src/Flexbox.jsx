@@ -8,6 +8,8 @@ const Flexbox = (props) => {
     alignContent,
     alignItems,
     alignSelf,
+    children,
+    element,
     flex,
     flexBasis,
     flexDirection,
@@ -71,11 +73,10 @@ const Flexbox = (props) => {
     ...style,
   });
 
-  return (
-    <div {...other} style={styles}>
-      {props.children}
-    </div>
-  );
+  return React.createElement(element, {
+    ...other,
+    style: styles,
+  }, children);
 };
 
 Flexbox.propTypes = {
@@ -95,6 +96,15 @@ Flexbox.propTypes = {
     'stretch',
   ]),
   children: React.PropTypes.node,
+  element: PropTypes.oneOf([
+    'article',
+    'aside',
+    'div',
+    'footer',
+    'header',
+    'nav',
+    'section',
+  ]),
   flex: PropTypes.string,
   flexBasis: PropTypes.string,
   flexDirection: PropTypes.oneOf([
@@ -143,6 +153,10 @@ Flexbox.propTypes = {
   paddingTop: PropTypes.string,
   style: PropTypes.object,
   width: PropTypes.string,
+};
+
+Flexbox.defaultProps = {
+  element: 'div',
 };
 
 export default Flexbox;

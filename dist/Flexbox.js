@@ -97,7 +97,7 @@ Flexbox.propTypes = {
   alignContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
   alignItems: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
   children: _react2.default.PropTypes.node,
-  element: _react.PropTypes.oneOf(['article', 'aside', 'div', 'footer', 'header', 'nav', 'section']),
+  element: _react.PropTypes.oneOf(['article', 'aside', 'div', 'footer', 'header', 'nav', 'section', 'main', 'figure']),
   flex: _react.PropTypes.string,
   flexBasis: _react.PropTypes.string,
   flexDirection: _react.PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),

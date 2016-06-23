@@ -1,6 +1,11 @@
 <big><h1 align="center">flexbox-react</h1></big>
 
 <p align="center">
+  <a href="https://travis-ci.org/nachoaIvarez/flexbox-react">
+    <img src="https://travis-ci.org/nachoaIvarez/flexbox-react.svg?branch=master"
+         alt="Build Status">
+  </a>
+  
   <a href="https://npmjs.org/package/flexbox-react">
     <img src="https://img.shields.io/npm/v/flexbox-react.svg?style=flat-square"
          alt="NPM Version">

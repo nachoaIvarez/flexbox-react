@@ -104,6 +104,8 @@ Flexbox.propTypes = {
     'header',
     'nav',
     'section',
+    'main',
+    'figure',
   ]),
   flex: PropTypes.string,
   flexBasis: PropTypes.string,

@@ -24,6 +24,8 @@ var Flexbox = function Flexbox(props) {
   var alignContent = props.alignContent;
   var alignItems = props.alignItems;
   var alignSelf = props.alignSelf;
+  var children = props.children;
+  var element = props.element;
   var flex = props.flex;
   var flexBasis = props.flexBasis;
   var flexDirection = props.flexDirection;
@@ -51,7 +53,7 @@ var Flexbox = function Flexbox(props) {
   var style = props.style;
   var width = props.width;
 
-  var other = _objectWithoutProperties(props, ['alignContent', 'alignItems', 'alignSelf', 'flex', 'flexBasis', 'flexDirection', 'flexGrow', 'flexShrink', 'flexWrap', 'height', 'inline', 'justifyContent', 'margin', 'marginBottom', 'marginLeft', 'marginRight', 'marginTop', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'order', 'padding', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop', 'style', 'width']);
+  var other = _objectWithoutProperties(props, ['alignContent', 'alignItems', 'alignSelf', 'children', 'element', 'flex', 'flexBasis', 'flexDirection', 'flexGrow', 'flexShrink', 'flexWrap', 'height', 'inline', 'justifyContent', 'margin', 'marginBottom', 'marginLeft', 'marginRight', 'marginTop', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'order', 'padding', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop', 'style', 'width']);
 
   var display = inline ? 'inline-flex' : 'flex';
 
@@ -86,17 +88,16 @@ var Flexbox = function Flexbox(props) {
     width: width
   }, style));
 
-  return _react2.default.createElement(
-    'div',
-    _extends({}, other, { style: styles }),
-    props.children
-  );
+  return _react2.default.createElement(element, _extends({}, other, {
+    style: styles
+  }), children);
 };
 
 Flexbox.propTypes = {
   alignContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
   alignItems: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
   children: _react2.default.PropTypes.node,
+  element: _react.PropTypes.oneOf(['article', 'aside', 'div', 'footer', 'header', 'nav', 'section']),
   flex: _react.PropTypes.string,
   flexBasis: _react.PropTypes.string,
   flexDirection: _react.PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
@@ -124,6 +125,10 @@ Flexbox.propTypes = {
   paddingTop: _react.PropTypes.string,
   style: _react.PropTypes.object,
   width: _react.PropTypes.string
+};
+
+Flexbox.defaultProps = {
+  element: 'div'
 };
 
 exports.default = Flexbox;

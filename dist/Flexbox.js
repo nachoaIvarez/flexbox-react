@@ -14,6 +14,10 @@ var _inlineStylePrefixer = require('inline-style-prefixer');
 
 var _inlineStylePrefixer2 = _interopRequireDefault(_inlineStylePrefixer);
 
+var _lodash = require('lodash.pickby');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -55,7 +59,7 @@ var Flexbox = function Flexbox(props) {
 
   var other = _objectWithoutProperties(props, ['alignContent', 'alignItems', 'alignSelf', 'children', 'display', 'element', 'flex', 'flexBasis', 'flexDirection', 'flexGrow', 'flexShrink', 'flexWrap', 'height', 'justifyContent', 'margin', 'marginBottom', 'marginLeft', 'marginRight', 'marginTop', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'order', 'padding', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop', 'style', 'width']);
 
-  var styles = prefixer.prefix(_extends({
+  var styles = prefixer.prefix((0, _lodash2.default)(_extends({
     alignContent: alignContent,
     alignItems: alignItems,
     alignSelf: alignSelf,
@@ -84,7 +88,9 @@ var Flexbox = function Flexbox(props) {
     paddingRight: paddingRight,
     paddingTop: paddingTop,
     width: width
-  }, style));
+  }, style), function (prop) {
+    return prop !== undefined;
+  }));
 
   return _react2.default.createElement(element, _extends({}, other, {
     style: styles
@@ -97,7 +103,7 @@ Flexbox.propTypes = {
   alignSelf: _react.PropTypes.oneOf(['baseline', 'center', 'flex-end', 'flex-start', 'stretch']),
   children: _react.PropTypes.node,
   display: _react.PropTypes.oneOf(['flex', 'inline-flex']),
-  element: _react.PropTypes.oneOf(['article', 'aside', 'div', 'footer', 'header', 'nav', 'section', 'main', 'figure']),
+  element: _react.PropTypes.oneOf(['article', 'aside', 'div', 'figure', 'footer', 'header', 'main', 'nav', 'section']),
   flex: _react.PropTypes.string,
   flexBasis: _react.PropTypes.string,
   flexDirection: _react.PropTypes.oneOf(['column-reverse', 'column', 'row-reverse', 'row']),

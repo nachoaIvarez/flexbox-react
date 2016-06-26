@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Prefixer from 'inline-style-prefixer';
+import pickBy from 'lodash.pickby';
 
 const prefixer = new Prefixer();
 
@@ -39,37 +40,39 @@ const Flexbox = (props) => {
     ...other,
   } = props;
 
-  const styles = prefixer.prefix({
-    alignContent,
-    alignItems,
-    alignSelf,
-    display,
-    flex,
-    flexBasis,
-    flexDirection,
-    flexGrow,
-    flexShrink,
-    flexWrap,
-    height,
-    justifyContent,
-    margin,
-    marginBottom,
-    marginLeft,
-    marginRight,
-    marginTop,
-    maxHeight,
-    maxWidth,
-    minHeight,
-    minWidth,
-    order,
-    padding,
-    paddingBottom,
-    paddingLeft,
-    paddingRight,
-    paddingTop,
-    width,
-    ...style,
-  });
+  const styles = prefixer.prefix(
+    pickBy({
+      alignContent,
+      alignItems,
+      alignSelf,
+      display,
+      flex,
+      flexBasis,
+      flexDirection,
+      flexGrow,
+      flexShrink,
+      flexWrap,
+      height,
+      justifyContent,
+      margin,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      marginTop,
+      maxHeight,
+      maxWidth,
+      minHeight,
+      minWidth,
+      order,
+      padding,
+      paddingBottom,
+      paddingLeft,
+      paddingRight,
+      paddingTop,
+      width,
+      ...style,
+    }, prop => prop !== undefined)
+  );
 
   return React.createElement(element, {
     ...other,

@@ -59,6 +59,7 @@
     "watch": "^0.19.1"
   },
   "dependencies": {
-    "inline-style-prefixer": "^1.0.4"
+    "inline-style-prefixer": "^1.0.4",
+    "lodash.pickby": "^4.4.0"
   }
 }

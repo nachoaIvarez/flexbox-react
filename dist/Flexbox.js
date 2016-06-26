@@ -25,6 +25,7 @@ var Flexbox = function Flexbox(props) {
   var alignItems = props.alignItems;
   var alignSelf = props.alignSelf;
   var children = props.children;
+  var display = props.display;
   var element = props.element;
   var flex = props.flex;
   var flexBasis = props.flexBasis;
@@ -33,7 +34,6 @@ var Flexbox = function Flexbox(props) {
   var flexShrink = props.flexShrink;
   var flexWrap = props.flexWrap;
   var height = props.height;
-  var inline = props.inline;
   var justifyContent = props.justifyContent;
   var margin = props.margin;
   var marginBottom = props.marginBottom;
@@ -53,9 +53,7 @@ var Flexbox = function Flexbox(props) {
   var style = props.style;
   var width = props.width;
 
-  var other = _objectWithoutProperties(props, ['alignContent', 'alignItems', 'alignSelf', 'children', 'element', 'flex', 'flexBasis', 'flexDirection', 'flexGrow', 'flexShrink', 'flexWrap', 'height', 'inline', 'justifyContent', 'margin', 'marginBottom', 'marginLeft', 'marginRight', 'marginTop', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'order', 'padding', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop', 'style', 'width']);
-
-  var display = inline ? 'inline-flex' : 'flex';
+  var other = _objectWithoutProperties(props, ['alignContent', 'alignItems', 'alignSelf', 'children', 'display', 'element', 'flex', 'flexBasis', 'flexDirection', 'flexGrow', 'flexShrink', 'flexWrap', 'height', 'justifyContent', 'margin', 'marginBottom', 'marginLeft', 'marginRight', 'marginTop', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'order', 'padding', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop', 'style', 'width']);
 
   var styles = prefixer.prefix(_extends({
     alignContent: alignContent,
@@ -94,20 +92,21 @@ var Flexbox = function Flexbox(props) {
 };
 
 Flexbox.propTypes = {
-  alignContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
-  alignItems: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
-  children: _react2.default.PropTypes.node,
+  alignContent: _react.PropTypes.oneOf(['center', 'flex-end', 'flex-start', 'space-around', 'space-between', 'stretch']),
+  alignItems: _react.PropTypes.oneOf(['baseline', 'center', 'flex-end', 'flex-start', 'stretch']),
+  alignSelf: _react.PropTypes.oneOf(['baseline', 'center', 'flex-end', 'flex-start', 'stretch']),
+  children: _react.PropTypes.node,
+  display: _react.PropTypes.oneOf(['flex', 'inline-flex']),
   element: _react.PropTypes.oneOf(['article', 'aside', 'div', 'footer', 'header', 'nav', 'section', 'main', 'figure']),
   flex: _react.PropTypes.string,
   flexBasis: _react.PropTypes.string,
-  flexDirection: _react.PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
+  flexDirection: _react.PropTypes.oneOf(['column-reverse', 'column', 'row-reverse', 'row']),
   flexGrow: _react.PropTypes.number,
   flexShrink: _react.PropTypes.number,
-  alignSelf: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
-  flexWrap: _react.PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
+  flexWrap: _react.PropTypes.oneOf(['nowrap', 'wrap-reverse', 'wrap']),
   height: _react.PropTypes.string,
   inline: _react.PropTypes.bool,
-  justifyContent: _react.PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around']),
+  justifyContent: _react.PropTypes.oneOf(['center', 'flex-end', 'flex-start', 'space-around', 'space-between']),
   margin: _react.PropTypes.string,
   marginBottom: _react.PropTypes.string,
   marginLeft: _react.PropTypes.string,
@@ -128,6 +127,7 @@ Flexbox.propTypes = {
 };
 
 Flexbox.defaultProps = {
+  display: 'flex',
   element: 'div'
 };
 

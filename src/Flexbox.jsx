@@ -9,6 +9,7 @@ const Flexbox = (props) => {
     alignItems,
     alignSelf,
     children,
+    display,
     element,
     flex,
     flexBasis,
@@ -17,7 +18,6 @@ const Flexbox = (props) => {
     flexShrink,
     flexWrap,
     height,
-    inline,
     justifyContent,
     margin,
     marginBottom,
@@ -38,8 +38,6 @@ const Flexbox = (props) => {
     width,
     ...other,
   } = props;
-
-  const display = inline ? 'inline-flex' : 'flex';
 
   const styles = prefixer.prefix({
     alignContent,
@@ -81,62 +79,66 @@ const Flexbox = (props) => {
 
 Flexbox.propTypes = {
   alignContent: PropTypes.oneOf([
-    'flex-start',
-    'flex-end',
     'center',
-    'space-between',
+    'flex-end',
+    'flex-start',
     'space-around',
+    'space-between',
     'stretch',
   ]),
   alignItems: PropTypes.oneOf([
-    'flex-start',
-    'flex-end',
-    'center',
     'baseline',
+    'center',
+    'flex-end',
+    'flex-start',
     'stretch',
   ]),
-  children: React.PropTypes.node,
+  alignSelf: PropTypes.oneOf([
+    'baseline',
+    'center',
+    'flex-end',
+    'flex-start',
+    'stretch',
+  ]),
+  children: PropTypes.node,
+  display: PropTypes.oneOf([
+    'flex',
+    'inline-flex',
+  ]),
   element: PropTypes.oneOf([
     'article',
     'aside',
     'div',
+    'figure',
     'footer',
     'header',
+    'main',
     'nav',
     'section',
-    'main',
-    'figure',
   ]),
   flex: PropTypes.string,
   flexBasis: PropTypes.string,
   flexDirection: PropTypes.oneOf([
-    'row',
-    'row-reverse',
-    'column',
     'column-reverse',
+    'column',
+    'row-reverse',
+    'row',
   ]),
   flexGrow: PropTypes.number,
   flexShrink: PropTypes.number,
-  alignSelf: PropTypes.oneOf([
-    'flex-start',
-    'flex-end',
-    'center',
-    'baseline',
-    'stretch',
-  ]),
   flexWrap: PropTypes.oneOf([
     'nowrap',
-    'wrap',
     'wrap-reverse',
+    'wrap',
   ]),
   height: PropTypes.string,
   inline: PropTypes.bool,
   justifyContent: PropTypes.oneOf([
-    'flex-start',
-    'flex-end',
     'center',
-    'space-between',
+    'flex-end',
+    'flex-start',
     'space-around',
+    'space-between',
   ]),
   margin: PropTypes.string,
   marginBottom: PropTypes.string,
@@ -158,6 +160,7 @@ Flexbox.propTypes = {
 };
 
 Flexbox.defaultProps = {
+  display: 'flex',
   element: 'div',
 };
 

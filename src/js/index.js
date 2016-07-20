@@ -4,7 +4,9 @@ import App from './components/App';
 
 const rootEl = document.getElementById('root');
 ReactDOM.render(
-  <AppContainer component={App} />,
+  <AppContainer>
+    <App />
+  </AppContainer>,
   rootEl
 );
 

@@ -31,35 +31,60 @@ npm install --save flexbox-react
 
 ## Usage
 ```js
-import { Flexbox, FlexItem } from "flexbox-react";
+import Flexbox from 'flexbox-react';
 
 //...
 <Flexbox flexDirection="column" minHeight="100vw">
 
-  <FlexItem height="60px">
+  <Flexbox element="header" height="60px">
     Header
-  </FlexItem>
+  </Flexbox>
 
-  <FlexItem flexGrow={1}>
+  <Flexbox flexGrow={1}>
     Content
-  </FlexItem>
+  </Flexbox>
 
-  <FlexItem height="60px">
+  <Flexbox element="footer" height="60px">
     Footer
-  </FlexItem>
+  </Flexbox>
 
 </Flexbox>
 ```
 *Sticky footer!*
 
-As you can see, there's some extra props as _layout_&hairsp;ing helpers. Those are `height`, `minHeight`, `maxHeight`, `width`, `minWidth`, `maxWidth`, `padding` and `margin`. The idea of `flexbox-react` is to be a complete solution to build layouts. Since, well, flexbox it is a complete solution to build layouts. It's all about the sugar. Feel free to create an issue or submit a PR if you think there's room for improvement here!
+As you can see, there's some extra props as _layout_&hairsp;ing helpers. Those are `height`, `minHeight`, `maxHeight`, `width`, `minWidth`, `maxWidth`, `padding`, `paddingTop`, `paddingRight`, `paddingBottom`, `paddingLeft`, `margin`, `marginTop`, `marginRight`, `marginBottom`, and `marginLeft`. The idea of `flexbox-react` is to be a complete solution to build layouts. Since, well, flexbox it is a complete solution to build layouts. It's all about the sugar. Feel free to create an issue or submit a PR if you think there's room for improvement here!
+
+### Semantic HTML tags
+
+If you need to use a tag other than `<div>` for the layout, like `<header>` or `<section>`, you can pass an extra `element` prop to the `<Flexbox />` component:
+
+```html
+<Flexbox element="header" height="80px">
+  ...
+</Flexbox>
+```
+
+which will render to this:
+
+```html
+<header style="display: flex; height: 80px;">
+  ...
+</header>
+```
 
 ## Props
 Take a look at
-[Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L30)
-and [FlexItem PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/FlexItem.jsx#L30). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
+[Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L82-L157). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
 [good starting point](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 ## License
 
 MIT © [Ignacio Álvarez](http://github.com/nachoaIvarez)
+
+[npm-url]: https://npmjs.org/package/flexbox-react
+[npm-image]: https://img.shields.io/npm/v/flexbox-react.svg?style=flat-square
+
+[depstat-url]: https://david-dm.org/nachoaIvarez/flexbox-react
+[depstat-image]: https://david-dm.org/nachoaIvarez/flexbox-react.svg?style=flat-square
+
+[download-badge]: http://img.shields.io/npm/dm/flexbox-react.svg?style=flat-square

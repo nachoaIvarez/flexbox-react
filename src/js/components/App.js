@@ -4,7 +4,8 @@ import Layout from './Layout';
 
 import readme from '~/README.md';
 
-export default () =>
-  (<Layout>
+export default () => (
+  <Layout>
     <Markdown source={readme} />
-  </Layout>);
+  </Layout>
+);

@@ -64,7 +64,7 @@ npm install --save flexbox-react
 import Flexbox from 'flexbox-react';
 
 //...
-<Flexbox flexDirection="column" minHeight="100vw">
+<Flexbox flexDirection="column" minHeight="100vh">
 
   <Flexbox element="header" height="60px">
     Header

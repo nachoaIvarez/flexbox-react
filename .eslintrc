@@ -4,5 +4,8 @@
     "node": true,
     "es6": true
   },
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "rules": {
+    "react/forbid-prop-types": 0
+  },
 }

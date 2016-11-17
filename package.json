@@ -3,6 +3,7 @@
   "version": "4.0.2",
   "description": "Unopinionated, standard compliant flexbox component. No propietary APIs. Nothing but flexbox.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "bin/",
     "dist/"
@@ -12,7 +13,7 @@
     "lint": "eslint src",
     "check": "npm run lint -s && dependency-check package.json --entry src",
     "prebuild": "npm run check -s && npm run clean -s",
-    "build": "babel --optional runtime src -d dist",
+    "build": "babel --optional runtime src -d dist --copy-files",
     "prepublish": "npm run build",
     "deploy": "git pull --rebase origin master && git push origin master",
     "patch": "npm version patch && npm publish",
@@ -52,11 +53,15 @@
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
-    "react": "^15.3.2",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
     "rimraf": "^2.5.4",
+    "typescript": "^2.0.10",
     "watch": "^1.0.1"
   },
   "dependencies": {
+    "@types/react": "^0.14.48",
+    "@types/react-dom": "^0.14.18",
     "inline-style-prefixer": "^2.0.4",
     "lodash.pickby": "^4.6.0"
   }

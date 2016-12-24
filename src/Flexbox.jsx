@@ -29,6 +29,7 @@ const Flexbox = (props) => {
     maxWidth,
     minHeight,
     minWidth,
+    onClick,
     order,
     padding,
     paddingBottom,
@@ -77,6 +78,7 @@ const Flexbox = (props) => {
   return React.createElement(element, {
     ...other,
     style: styles,
+    onClick,
   }, children);
 };
 
@@ -152,7 +154,8 @@ Flexbox.propTypes = {
   maxWidth: PropTypes.string,
   minHeight: PropTypes.string,
   minWidth: PropTypes.string,
-  order: PropTypes.number,
+  onClick: PropTypes.func,
+  order: PropTypes.string,
   padding: PropTypes.string,
   paddingBottom: PropTypes.string,
   paddingLeft: PropTypes.string,

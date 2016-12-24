@@ -49,6 +49,7 @@ declare namespace FlexboxReact {
         maxWidth?: string;
         minHeight?: string;
         minWidth?: string;
+        onClick?: function;
         order?: number;
         padding?: string;
         paddingBottom?: string;

@@ -155,7 +155,7 @@ Flexbox.propTypes = {
   minHeight: PropTypes.string,
   minWidth: PropTypes.string,
   onClick: PropTypes.func,
-  order: PropTypes.string,
+  order: PropTypes.number,
   padding: PropTypes.string,
   paddingBottom: PropTypes.string,
   paddingLeft: PropTypes.string,

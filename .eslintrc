@@ -2,10 +2,12 @@
   "parser": "babel-eslint",
   "env": {
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": "airbnb",
   "rules": {
-    "react/forbid-prop-types": 0
+    "react/forbid-prop-types": 0,
+    "react/require-default-props": 0
   },
 }

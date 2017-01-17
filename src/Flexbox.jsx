@@ -109,6 +109,7 @@ Flexbox.propTypes = {
     'inline-flex',
   ]),
   element: PropTypes.oneOf([
+    PropTypes.element,
     'article',
     'aside',
     'div',

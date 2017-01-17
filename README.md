@@ -7,22 +7,22 @@
   </a>
 
   <a href="https://npmjs.org/package/flexbox-react">
-    <img src="https://img.shields.io/npm/v/flexbox-react.svg?style=flat-square"
+    <img src="https://img.shields.io/npm/v/flexbox-react.svg"
          alt="NPM Version">
   </a>
 
   <a href="https://npmjs.org/package/flexbox-react">
-    <img src="http://img.shields.io/npm/dm/flexbox-react.svg?style=flat-square"
+    <img src="http://img.shields.io/npm/dm/flexbox-react.svg"
          alt="Downloads">
   </a>
 
   <a href="https://david-dm.org/nachoaIvarez/flexbox-react.svg">
-    <img src="https://david-dm.org/nachoaIvarez/flexbox-react.svg?style=flat-square"
+    <img src="https://david-dm.org/nachoaIvarez/flexbox-react.svg"
          alt="Dependency Status">
   </a>
 
   <a href="https://github.com/nachoaIvarez/flexbox-react/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/flexbox-react.svg?style=flat-square"
+    <img src="https://img.shields.io/npm/l/flexbox-react.svg"
          alt="License">
   </a>
 </p>
@@ -41,8 +41,7 @@ arbitrarily named and _spec_&hairsp;ed components to layout your apps.
 No more `first={true}`, `ternary={true}`, `spaced={true}`,`grouped={true}`
 or any other arbitrarily named and _spec_&hairsp;ed props to layout your apps.
 
-`flexbox-react` is agnostic of which post/pre css build flow you have, it works out of the box. It's agnostic to it. You could have all your styling on css files. Or all inlined. This sits just in the middle. I think it is a good idea to see your components and know how they are laid out without jumping between css files or arbitrary, layout-exclusive components specifications. That said, I do believe that every other styles (animations, transitions, aesthetics in general) _must_ live in css files (`css-modules` ideally) so you can take advantage of an extra build step like `postCSS`, `sass`, `less`, etc.  _Rembember, we build components. On the [React mindset](https://facebook.github.io/react/docs/thinking-in-react.html),
-some inline stuff is good. Relax._
+`flexbox-react` is agnostic of which post/pre css build flow you have, it works out of the box. It's agnostic to it. You could have all your styling on css files. Or all inlined. This sits just in the middle. It might be a good idea to see your components and know how they are laid out without jumping between css files or arbitrary, layout-exclusive components specifications.
 
 ## How
 No hardcoded, bloated, unnecesary vendor prefixes, by
@@ -56,7 +55,11 @@ component.
 ## Install
 
 ```sh
-npm install --save flexbox-react
+yarn add flexbox-react
+```
+or
+```
+npm i --save flexbox-react
 ```
 
 ## Usage
@@ -107,14 +110,16 @@ Take a look at
 [Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L82-L157). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
 [good starting point](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
+If TypeScript is your cup of tea, check the [type definitions](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/index.d.ts), we support them too.
+
 ## License
 
 MIT © [Ignacio Álvarez](http://github.com/nachoaIvarez)
 
 [npm-url]: https://npmjs.org/package/flexbox-react
-[npm-image]: https://img.shields.io/npm/v/flexbox-react.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/flexbox-react.svg
 
 [depstat-url]: https://david-dm.org/nachoaIvarez/flexbox-react
-[depstat-image]: https://david-dm.org/nachoaIvarez/flexbox-react.svg?style=flat-square
+[depstat-image]: https://david-dm.org/nachoaIvarez/flexbox-react.svg
 
-[download-badge]: http://img.shields.io/npm/dm/flexbox-react.svg?style=flat-square
+[download-badge]: http://img.shields.io/npm/dm/flexbox-react.svg

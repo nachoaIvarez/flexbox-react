@@ -71,7 +71,7 @@ const Flexbox = (props) => {
       paddingTop,
       width,
       ...style,
-    }, prop => prop !== undefined)
+    }, prop => prop !== undefined),
   );
 
   return React.createElement(element, {

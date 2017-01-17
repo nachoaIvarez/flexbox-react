@@ -11,10 +11,11 @@
   "scripts": {
     "clean": "rimraf dist",
     "lint": "eslint src",
-    "check": "npm run lint -s && dependency-check package.json --entry src",
-    "prebuild": "npm run check -s && npm run clean -s",
-    "build": "babel --optional runtime src -d dist --copy-files",
-    "prepublish": "npm run build",
+    "test": "jest",
+    "check": "yarn run lint -s && yarn run test && dependency-check package.json --entry src",
+    "prebuild": "yarn run check -s && yarn run clean -s",
+    "build": "babel --optional runtime src -d dist --copy-files --ignore src/__tests__",
+    "prepublish": "yarn run build",
     "postpublish": "git push origin master --follow-tags"
   },
   "repository": {
@@ -44,6 +45,7 @@
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
+    "babel-jest": "^18.0.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
@@ -53,8 +55,10 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
+    "jest": "^18.1.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-test-renderer": "^15.4.2",
     "rimraf": "^2.5.4",
     "typescript": "^2.1.5",
     "watch": "^1.0.1"
@@ -62,5 +66,8 @@
   "dependencies": {
     "inline-style-prefixer": "^2.0.5",
     "lodash.pickby": "^4.6.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

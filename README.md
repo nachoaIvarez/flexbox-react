@@ -29,6 +29,8 @@
 
 
 ## Intro
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/nachoaIvarez/flexbox-react.svg)](https://greenkeeper.io/)
 Unopinionated, standard compliant flexbox components.
 
 ## Why

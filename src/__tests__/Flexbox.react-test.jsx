@@ -1,39 +1,62 @@
+/* global document */
+
 import React from 'react';
+import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import Flexbox from '../Flexbox';
 
-test('Renders minimal <Flexbox /> component', () => {
-  const component = renderer.create(
-    <Flexbox />,
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+const TEST_CLASS = 'test-class';
 
-test('Renders custom element (header) <Flexbox /> component', () => {
-  const component = renderer.create(
-    <Flexbox element="header" />,
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+const prettifyCSS = css =>
+  css
+    .replace(/\s+/g, '')
+    .replace(/;/g, ';\n  ')
+    .replace(/{/g, ' {\n  ')
+    .replace(/ {2}}/g, '}\n')
+    .replace(/:}/g, ': ');
 
-test('Renders <Flexbox /> component with several flexbox props', () => {
-  const component = renderer.create(
+const testComponent = component =>
+  () => {
+    const div = document.createElement('div');
+    const mockComponent = renderer.create(component).toJSON();
+    const classNames = mockComponent.props.className.split(' ');
+
+    ReactDOM.render(component, div);
+    const css = prettifyCSS(document.head.childNodes['1'].textContent);
+
+    // Every class present in the rendered element must be either the TEST_CLASS (to test if
+    // we can pass arbitrary classNames to the component) or generated classNames which must be
+    // also present in the generated <style> rules by styled-components.
+    expect(
+      classNames.every(className => className === TEST_CLASS || css.includes(className)),
+    ).toBeTruthy();
+    expect(css).toMatchSnapshot();
+    expect(mockComponent).toMatchSnapshot();
+  };
+
+test('Renders minimal <Flexbox /> component', testComponent(<Flexbox />));
+
+test(
+  'Renders custom element (header) <Flexbox /> component',
+  testComponent(<Flexbox element="header" />),
+);
+
+test(
+  'Renders <Flexbox /> component with several flexbox props',
+  testComponent(
     <Flexbox
-      alignitems="center"
+      alignItems="center"
       flexDirection="column"
       flexGrow={1}
       flexWrap="wrap"
       justifyContent="center"
     />,
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  ),
+);
 
-test('Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc)', () => {
-  const component = renderer.create(
+test(
+  'Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc)',
+  testComponent(
     <Flexbox
       height="100%"
       margin="66px 33px"
@@ -44,33 +67,24 @@ test('Renders <Flexbox /> component with layout helpers (height, width, margin, 
       paddingLeft="50px"
       width="100px"
     />,
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  ),
+);
 
-test('Renders <Flexbox /> with extra props, outside expected/defined ones (like event handlers or className)', () => {
-  const component = renderer.create(
-    <Flexbox
-      onClick={() => 'On click handler'}
-      key="666"
-      className="test-class"
-      id="test-id"
-    />,
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+test(
+  'Renders <Flexbox /> with extra props, outside expected/defined ones (like event handlers or className)',
+  testComponent(
+    <Flexbox onClick={() => 'On click handler'} key="666" className="test-class" id="test-id" />,
+  ),
+);
 
-test('Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too', () => {
-  const component = renderer.create(
+test(
+  'Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too',
+  testComponent(
     <Flexbox
       style={{
         backgroundColor: 'red',
         display: 'block',
       }}
     />,
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  ),
+);

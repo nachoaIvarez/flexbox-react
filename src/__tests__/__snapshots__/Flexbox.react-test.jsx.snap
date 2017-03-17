@@ -1,112 +1,264 @@
-exports[`test Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc) 1`] = `
-<div
-  style={
-    Object {
-      "display": Array [
-        "-webkit-box",
-        "-moz-box",
-        "-ms-flexbox",
-        "-webkit-flex",
-        "flex",
-      ],
-      "height": "100%",
-      "margin": "66px 33px",
-      "marginRight": "25px",
-      "maxWidth": "100vw",
-      "minHeight": "100vh",
-      "padding": "99px",
-      "paddingLeft": "50px",
-      "width": "100px",
-    }
-  } />
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc) 1`] = `
+".gyZqoD {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+}
+.gaFQwb {
+  align-items:center;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  -webkit-align-items:center;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  flex-direction:column;
+  -webkit-box-direction:normal;
+  -webkit-box-orient:vertical;
+  -ms-flex-direction:column;
+  -webkit-flex-direction:column;
+  flex-grow:1;
+  -ms-flex-positive:1;
+  -webkit-flex-grow:1;
+  flex-wrap:wrap;
+  -webkit-box-lines:multiple;
+  -ms-flex-wrap:wrap;
+  -webkit-flex-wrap:wrap;
+  justify-content:center;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+  -webkit-justify-content:center;
+}
+.idrnwy {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  height:100%;
+  margin:66px33px;
+  margin-right:25px;
+  max-width:100vw;
+  min-height:100vh;
+  padding:99px;
+  padding-left:50px;
+  width:100px;
+}
+"
 `;
 
-exports[`test Renders <Flexbox /> component with several flexbox props 1`] = `
+exports[`Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc) 2`] = `
 <div
-  alignitems="center"
-  style={
-    Object {
-      "WebkitBoxDirection": "normal",
-      "WebkitBoxLines": "multiple",
-      "WebkitBoxOrient": "vertical",
-      "WebkitBoxPack": "center",
-      "WebkitFlexDirection": "column",
-      "WebkitFlexGrow": 1,
-      "WebkitFlexWrap": "wrap",
-      "WebkitJustifyContent": "center",
-      "display": Array [
-        "-webkit-box",
-        "-moz-box",
-        "-ms-flexbox",
-        "-webkit-flex",
-        "flex",
-      ],
-      "flexDirection": "column",
-      "flexGrow": 1,
-      "flexWrap": "wrap",
-      "justifyContent": "center",
-      "msFlexDirection": "column",
-      "msFlexPack": "center",
-      "msFlexPositive": 1,
-      "msFlexWrap": "wrap",
-    }
-  } />
+  className="idrnwy"
+/>
 `;
 
-exports[`test Renders <Flexbox /> with extra props, outside expected/defined ones (like event handlers or className) 1`] = `
+exports[`Renders <Flexbox /> component with several flexbox props 1`] = `
+".gyZqoD {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+}
+.gaFQwb {
+  align-items:center;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  -webkit-align-items:center;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  flex-direction:column;
+  -webkit-box-direction:normal;
+  -webkit-box-orient:vertical;
+  -ms-flex-direction:column;
+  -webkit-flex-direction:column;
+  flex-grow:1;
+  -ms-flex-positive:1;
+  -webkit-flex-grow:1;
+  flex-wrap:wrap;
+  -webkit-box-lines:multiple;
+  -ms-flex-wrap:wrap;
+  -webkit-flex-wrap:wrap;
+  justify-content:center;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+  -webkit-justify-content:center;
+}
+"
+`;
+
+exports[`Renders <Flexbox /> component with several flexbox props 2`] = `
 <div
-  className="test-class"
+  className="gaFQwb"
+/>
+`;
+
+exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (like event handlers or className) 1`] = `
+".gyZqoD {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+}
+.gaFQwb {
+  align-items:center;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  -webkit-align-items:center;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  flex-direction:column;
+  -webkit-box-direction:normal;
+  -webkit-box-orient:vertical;
+  -ms-flex-direction:column;
+  -webkit-flex-direction:column;
+  flex-grow:1;
+  -ms-flex-positive:1;
+  -webkit-flex-grow:1;
+  flex-wrap:wrap;
+  -webkit-box-lines:multiple;
+  -ms-flex-wrap:wrap;
+  -webkit-flex-wrap:wrap;
+  justify-content:center;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+  -webkit-justify-content:center;
+}
+.idrnwy {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  height:100%;
+  margin:66px33px;
+  margin-right:25px;
+  max-width:100vw;
+  min-height:100vh;
+  padding:99px;
+  padding-left:50px;
+  width:100px;
+}
+"
+`;
+
+exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (like event handlers or className) 2`] = `
+<div
+  className="test-class gyZqoD"
   id="test-id"
   onClick={[Function]}
-  style={
-    Object {
-      "display": Array [
-        "-webkit-box",
-        "-moz-box",
-        "-ms-flexbox",
-        "-webkit-flex",
-        "flex",
-      ],
-    }
-  } />
+/>
 `;
 
-exports[`test Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too 1`] = `
+exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too 1`] = `
+".gyZqoD {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+}
+.gaFQwb {
+  align-items:center;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  -webkit-align-items:center;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  flex-direction:column;
+  -webkit-box-direction:normal;
+  -webkit-box-orient:vertical;
+  -ms-flex-direction:column;
+  -webkit-flex-direction:column;
+  flex-grow:1;
+  -ms-flex-positive:1;
+  -webkit-flex-grow:1;
+  flex-wrap:wrap;
+  -webkit-box-lines:multiple;
+  -ms-flex-wrap:wrap;
+  -webkit-flex-wrap:wrap;
+  justify-content:center;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+  -webkit-justify-content:center;
+}
+.idrnwy {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  height:100%;
+  margin:66px33px;
+  margin-right:25px;
+  max-width:100vw;
+  min-height:100vh;
+  padding:99px;
+  padding-left:50px;
+  width:100px;
+}
+"
+`;
+
+exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too 2`] = `
 <div
+  className="gyZqoD"
   style={
     Object {
       "backgroundColor": "red",
       "display": "block",
     }
-  } />
+  }
+/>
 `;
 
-exports[`test Renders custom element (header) <Flexbox /> component 1`] = `
+exports[`Renders custom element (header) <Flexbox /> component 1`] = `
+".gyZqoD {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+}
+"
+`;
+
+exports[`Renders custom element (header) <Flexbox /> component 2`] = `
 <header
-  style={
-    Object {
-      "display": Array [
-        "-webkit-box",
-        "-moz-box",
-        "-ms-flexbox",
-        "-webkit-flex",
-        "flex",
-      ],
-    }
-  } />
+  className="gyZqoD"
+/>
 `;
 
-exports[`test Renders minimal <Flexbox /> component 1`] = `
+exports[`Renders minimal <Flexbox /> component 1`] = `
+".gyZqoD {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+}
+"
+`;
+
+exports[`Renders minimal <Flexbox /> component 2`] = `
 <div
-  style={
-    Object {
-      "display": Array [
-        "-webkit-box",
-        "-moz-box",
-        "-ms-flexbox",
-        "-webkit-flex",
-        "flex",
-      ],
-    }
-  } />
+  className="gyZqoD"
+/>
 `;

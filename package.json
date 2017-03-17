@@ -55,7 +55,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
-    "jest": "^18.1.0",
+    "jest": "^19.0.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-test-renderer": "^15.4.2",
@@ -64,10 +64,9 @@
     "watch": "^1.0.1"
   },
   "dependencies": {
-    "inline-style-prefixer": "^2.0.5",
-    "lodash.pickby": "^4.6.0"
+    "styled-components": "^1.4.4"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "jsdom"
   }
 }

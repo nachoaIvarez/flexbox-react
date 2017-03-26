@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc) 1`] = `
-".gyZqoD {
+".cmOkcp {
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
   display:-webkit-flex;
   display:flex;
 }
-.gaFQwb {
+.jwcsUI {
   align-items:center;
   -webkit-box-align:center;
   -ms-flex-align:center;
@@ -35,7 +35,7 @@ exports[`Renders <Flexbox /> component with layout helpers (height, width, margi
   -ms-flex-pack:center;
   -webkit-justify-content:center;
 }
-.idrnwy {
+.YQCAm {
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
@@ -55,19 +55,19 @@ exports[`Renders <Flexbox /> component with layout helpers (height, width, margi
 
 exports[`Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc) 2`] = `
 <div
-  className="idrnwy"
+  className="YQCAm"
 />
 `;
 
 exports[`Renders <Flexbox /> component with several flexbox props 1`] = `
-".gyZqoD {
+".cmOkcp {
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
   display:-webkit-flex;
   display:flex;
 }
-.gaFQwb {
+.jwcsUI {
   align-items:center;
   -webkit-box-align:center;
   -ms-flex-align:center;
@@ -99,19 +99,19 @@ exports[`Renders <Flexbox /> component with several flexbox props 1`] = `
 
 exports[`Renders <Flexbox /> component with several flexbox props 2`] = `
 <div
-  className="gaFQwb"
+  className="jwcsUI"
 />
 `;
 
 exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (like event handlers or className) 1`] = `
-".gyZqoD {
+".cmOkcp {
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
   display:-webkit-flex;
   display:flex;
 }
-.gaFQwb {
+.jwcsUI {
   align-items:center;
   -webkit-box-align:center;
   -ms-flex-align:center;
@@ -138,7 +138,7 @@ exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (li
   -ms-flex-pack:center;
   -webkit-justify-content:center;
 }
-.idrnwy {
+.YQCAm {
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
@@ -158,21 +158,21 @@ exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (li
 
 exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (like event handlers or className) 2`] = `
 <div
-  className="test-class gyZqoD"
+  className="test-class cmOkcp"
   id="test-id"
   onClick={[Function]}
 />
 `;
 
 exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too 1`] = `
-".gyZqoD {
+".cmOkcp {
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
   display:-webkit-flex;
   display:flex;
 }
-.gaFQwb {
+.jwcsUI {
   align-items:center;
   -webkit-box-align:center;
   -ms-flex-align:center;
@@ -199,7 +199,7 @@ exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react
   -ms-flex-pack:center;
   -webkit-justify-content:center;
 }
-.idrnwy {
+.YQCAm {
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
@@ -219,7 +219,7 @@ exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react
 
 exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too 2`] = `
 <div
-  className="gyZqoD"
+  className="cmOkcp"
   style={
     Object {
       "backgroundColor": "red",
@@ -230,7 +230,7 @@ exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react
 `;
 
 exports[`Renders custom element (header) <Flexbox /> component 1`] = `
-".gyZqoD {
+".cmOkcp {
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
@@ -242,12 +242,12 @@ exports[`Renders custom element (header) <Flexbox /> component 1`] = `
 
 exports[`Renders custom element (header) <Flexbox /> component 2`] = `
 <header
-  className="gyZqoD"
+  className="cmOkcp"
 />
 `;
 
 exports[`Renders minimal <Flexbox /> component 1`] = `
-".gyZqoD {
+".cmOkcp {
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
@@ -259,6 +259,6 @@ exports[`Renders minimal <Flexbox /> component 1`] = `
 
 exports[`Renders minimal <Flexbox /> component 2`] = `
 <div
-  className="gyZqoD"
+  className="cmOkcp"
 />
 `;

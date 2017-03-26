@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const { string, oneOf, node, number, bool, object } = PropTypes;
 
-const Flexbox = (props) => {
-  const {
+const Flexbox = styled(
+  ({
     alignContent,
     alignItems,
     alignSelf,
@@ -35,42 +35,40 @@ const Flexbox = (props) => {
     paddingRight,
     paddingTop,
     width,
-    ...otherProps
-  } = props;
-
-  const StyledComponent = styled(element)`
-    ${alignContent ? `align-content: ${alignContent};` : ''}
-    ${alignItems ? `align-items: ${alignItems};` : ''}
-    ${alignSelf ? `align-self: ${alignSelf};` : ''}
-    ${display ? `display: ${display};` : ''}
-    ${flex ? `flex: ${flex};` : ''}
-    ${flexBasis ? `flex-basis: ${flexBasis};` : ''}
-    ${flexDirection ? `flex-direction: ${flexDirection};` : ''}
-    ${flexGrow ? `flex-grow: ${flexGrow};` : ''}
-    ${flexShrink ? `flex-shrink: ${flexShrink};` : ''}
-    ${flexWrap ? `flex-wrap: ${flexWrap};` : ''}
-    ${height ? `height: ${height};` : ''}
-    ${justifyContent ? `justify-content: ${justifyContent};` : ''}
-    ${margin ? `margin: ${margin};` : ''}
-    ${marginBottom ? `margin-bottom: ${marginBottom};` : ''}
-    ${marginLeft ? `margin-left: ${marginLeft};` : ''}
-    ${marginRight ? `margin-right: ${marginRight};` : ''}
-    ${marginTop ? `margin-top: ${marginTop};` : ''}
-    ${maxHeight ? `max-height: ${maxHeight};` : ''}
-    ${maxWidth ? `max-width: ${maxWidth};` : ''}
-    ${minHeight ? `min-height: ${minHeight};` : ''}
-    ${minWidth ? `min-width: ${minWidth};` : ''}
-    ${order ? `order: ${order};` : ''}
-    ${padding ? `padding: ${padding};` : ''}
-    ${paddingBottom ? `padding-bottom: ${paddingBottom};` : ''}
-    ${paddingLeft ? `padding-left: ${paddingLeft};` : ''}
-    ${paddingRight ? `padding-right: ${paddingRight};` : ''}
-    ${paddingTop ? `padding-top: ${paddingTop};` : ''}
-    ${width ? `width: ${width};` : ''}
-  `;
-
-  return React.createElement(StyledComponent, otherProps, children);
-};
+    ...props
+  }) => {
+    return React.createElement(element, props, children);
+  }
+)`
+  ${props => props.alignContent ? `align-content: ${props.alignContent};` : ''}
+  ${props => props.alignSelf ? `align-self: ${props.alignSelf};` : ''}
+  ${props => props.alignItems ? `align-items: ${props.alignItems};` : ''}
+  ${props => props.display ? `display: ${props.display};` : ''}
+  ${props => props.flex ? `flex: ${props.flex};` : ''}
+  ${props => props.flexBasis ? `flex-basis: ${props.flexBasis};` : ''}
+  ${props => props.flexDirection ? `flex-direction: ${props.flexDirection};` : ''}
+  ${props => props.flexGrow ? `flex-grow: ${props.flexGrow};` : ''}
+  ${props => props.flexShrink ? `flex-shrink: ${props.flexShrink};` : ''}
+  ${props => props.flexWrap ? `flex-wrap: ${props.flexWrap};` : ''}
+  ${props => props.height ? `height: ${props.height};` : ''}
+  ${props => props.justifyContent ? `justify-content: ${props.justifyContent};` : ''}
+  ${props => props.margin ? `margin: ${props.margin};` : ''}
+  ${props => props.marginBottom ? `margin-bottom: ${props.marginBottom};` : ''}
+  ${props => props.marginLeft ? `margin-left: ${props.marginLeft};` : ''}
+  ${props => props.marginRight ? `margin-right: ${props.marginRight};` : ''}
+  ${props => props.marginTop ? `margin-top: ${props.marginTop};` : ''}
+  ${props => props.maxHeight ? `max-height: ${props.maxHeight};` : ''}
+  ${props => props.maxWidth ? `max-width: ${props.maxWidth};` : ''}
+  ${props => props.minHeight ? `min-height: ${props.minHeight};` : ''}
+  ${props => props.minWidth ? `min-width: ${props.minWidth};` : ''}
+  ${props => props.order ? `order: ${props.order};` : ''}
+  ${props => props.padding ? `padding: ${props.padding};` : ''}
+  ${props => props.paddingBottom ? `padding-bottom: ${props.paddingBottom};` : ''}
+  ${props => props.paddingLeft ? `padding-left: ${props.paddingLeft};` : ''}
+  ${props => props.paddingRight ? `padding-right: ${props.paddingRight};` : ''}
+  ${props => props.paddingTop ? `padding-top: ${props.paddingTop};` : ''}
+  ${props => props.width ? `width: ${props.width};` : ''}
+`;
 
 Flexbox.propTypes = {
   alignContent: oneOf([

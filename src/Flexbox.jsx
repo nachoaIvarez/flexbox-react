@@ -3,43 +3,39 @@ import styled from 'styled-components';
 
 const { string, oneOf, node, number, bool, object } = PropTypes;
 
-const Flexbox = styled(
-  ({
-    alignContent,
-    alignItems,
-    alignSelf,
-    children,
-    display,
-    element,
-    flex,
-    flexBasis,
-    flexDirection,
-    flexGrow,
-    flexShrink,
-    flexWrap,
-    height,
-    justifyContent,
-    margin,
-    marginBottom,
-    marginLeft,
-    marginRight,
-    marginTop,
-    maxHeight,
-    maxWidth,
-    minHeight,
-    minWidth,
-    order,
-    padding,
-    paddingBottom,
-    paddingLeft,
-    paddingRight,
-    paddingTop,
-    width,
-    ...props
-  }) => {
-    return React.createElement(element, props, children);
-  }
-)`
+const Flexbox = styled(({
+  alignContent,
+  alignItems,
+  alignSelf,
+  children,
+  display,
+  element,
+  flex,
+  flexBasis,
+  flexDirection,
+  flexGrow,
+  flexShrink,
+  flexWrap,
+  height,
+  justifyContent,
+  margin,
+  marginBottom,
+  marginLeft,
+  marginRight,
+  marginTop,
+  maxHeight,
+  maxWidth,
+  minHeight,
+  minWidth,
+  order,
+  padding,
+  paddingBottom,
+  paddingLeft,
+  paddingRight,
+  paddingTop,
+  width,
+  ...props
+}) => React.createElement(element, props, children))`
   ${props => props.alignContent ? `align-content: ${props.alignContent};` : ''}
   ${props => props.alignSelf ? `align-self: ${props.alignSelf};` : ''}
   ${props => props.alignItems ? `align-items: ${props.alignItems};` : ''}

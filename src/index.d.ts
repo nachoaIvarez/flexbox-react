@@ -29,7 +29,7 @@ declare namespace FlexboxReact {
         alignItems?: AlignItems;
         alignSelf?: AlignItems;
         children?: React.ReactNode;
-		className?: string;
+        className?: string;
         display?: FlexDisplays;
         element?: Elements;
         flex?: string;

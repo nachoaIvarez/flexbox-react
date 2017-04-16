@@ -34,10 +34,11 @@
   },
   "homepage": "https://github.com/nachoaIvarez/flexbox-react#readme",
   "optionalDependencies": {
-    "@types/react": "^15.0.0",
-    "@types/react-dom": "^0.14.20"
+    "@types/react": "^15.0.21",
+    "@types/react-dom": "^0.14.23"
   },
   "peerDependencies": {
+    "prop-types": "*",
     "react": "*",
     "react-dom": "*"
   },
@@ -56,15 +57,16 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "jest": "^19.0.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-test-renderer": "^15.4.2",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4",
     "rimraf": "^2.5.4",
     "typescript": "^2.1.5",
     "watch": "^1.0.1"
   },
   "dependencies": {
-    "styled-components": "^1.4.4"
+    "styled-components": "^1.4.5"
   },
   "jest": {
     "testEnvironment": "jsdom"

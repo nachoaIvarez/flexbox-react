@@ -44,7 +44,7 @@ or any other arbitrarily named and _spec_&hairsp;ed props to layout your apps.
 `flexbox-react` is agnostic of which post/pre css build flow you have, it works out of the box. It's agnostic to it. You could have all your styling on css files. Or all inlined. This sits just in the middle. It might be a good idea to see your components and know how they are laid out without jumping between css files or arbitrary, layout-exclusive components specifications.
 
 ## How
-No hardcoded, bloated, unnecesary vendor prefixes, by
+No hardcoded, bloated, unnecessary vendor prefixes, by
 <a href="http://caniuse.com"> caniuse</a>. Just those your browser needs, based
 on your `userAgent`.
 
@@ -56,19 +56,16 @@ component.
 
 ```sh
 yarn add flexbox-react
-```
-or
-```
-npm i --save flexbox-react
+# or
+npm install --save flexbox-react
 ```
 
 ## Usage
 ```js
 import Flexbox from 'flexbox-react';
 
-//...
+// ...
 <Flexbox flexDirection="column" minHeight="100vh">
-
   <Flexbox element="header" height="60px">
     Header
   </Flexbox>
@@ -80,12 +77,11 @@ import Flexbox from 'flexbox-react';
   <Flexbox element="footer" height="60px">
     Footer
   </Flexbox>
-
 </Flexbox>
 ```
 *Sticky footer!*
 
-As you can see, there's some extra props as _layout_&hairsp;ing helpers. Those are `height`, `minHeight`, `maxHeight`, `width`, `minWidth`, `maxWidth`, `padding`, `paddingTop`, `paddingRight`, `paddingBottom`, `paddingLeft`, `margin`, `marginTop`, `marginRight`, `marginBottom`, and `marginLeft`. The idea of `flexbox-react` is to be a complete solution to build layouts. Since, well, flexbox it is a complete solution to build layouts. It's all about the sugar. Feel free to create an issue or submit a PR if you think there's room for improvement here!
+As you can see, there're some extra props as _layout_&hairsp;ing helpers. Those are `height`, `minHeight`, `maxHeight`, `width`, `minWidth`, `maxWidth`, `padding`, `paddingTop`, `paddingRight`, `paddingBottom`, `paddingLeft`, `margin`, `marginTop`, `marginRight`, `marginBottom`, and `marginLeft`. The idea of `flexbox-react` is to be a complete solution to build layouts. Since, well, flexbox is a complete solution to build layouts. It's all about the sugar. Feel free to create an issue or submit a PR if you think there's room for improvement here!
 
 ### Semantic HTML tags
 
@@ -107,8 +103,7 @@ which will render to this:
 
 ## Props
 Take a look at
-[Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L82-L157). No mysteries. As said, you just need to know actual flexbox properties not any propietary syntax for them, if you're not familiar with flexbox, here is a
-[good starting point](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+[Flexbox PropTypes](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/Flexbox.jsx#L68-L141). No mysteries. As said, you just need to know actual flexbox properties not any proprietary syntax for them. If you're not familiar with flexbox, [this is a good starting point](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 If TypeScript is your cup of tea, check the [type definitions](https://github.com/nachoaIvarez/flexbox-react/blob/master/src/index.d.ts), we support them too.
 

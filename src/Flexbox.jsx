@@ -1,7 +1,6 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
-
-const { string, oneOf, node, number, bool, object } = PropTypes;
 
 const Flexbox = styled(({
   alignContent,
@@ -67,7 +66,7 @@ const Flexbox = styled(({
 `;
 
 Flexbox.propTypes = {
-  alignContent: oneOf([
+  alignContent: PropTypes.oneOf([
     'center',
     'flex-end',
     'flex-start',
@@ -75,11 +74,23 @@ Flexbox.propTypes = {
     'space-between',
     'stretch',
   ]),
-  alignItems: oneOf(['baseline', 'center', 'flex-end', 'flex-start', 'stretch']),
-  alignSelf: oneOf(['baseline', 'center', 'flex-end', 'flex-start', 'stretch']),
-  children: node,
-  display: oneOf(['flex', 'inline-flex']),
-  element: oneOf([
+  alignItems: PropTypes.oneOf([
+    'baseline',
+    'center',
+    'flex-end',
+    'flex-start',
+    'stretch',
+  ]),
+  alignSelf: PropTypes.oneOf([
+    'baseline',
+    'center',
+    'flex-end',
+    'flex-start',
+    'stretch',
+  ]),
+  children: PropTypes.node,
+  display: PropTypes.oneOf(['flex', 'inline-flex']),
+  element: PropTypes.oneOf([
     'article',
     'aside',
     'div',
@@ -90,32 +101,43 @@ Flexbox.propTypes = {
     'nav',
     'section',
   ]),
-  flex: string,
-  flexBasis: string,
-  flexDirection: oneOf(['column-reverse', 'column', 'row-reverse', 'row']),
-  flexGrow: number,
-  flexShrink: number,
-  flexWrap: oneOf(['nowrap', 'wrap-reverse', 'wrap']),
-  height: string,
-  inline: bool,
-  justifyContent: oneOf(['center', 'flex-end', 'flex-start', 'space-around', 'space-between']),
-  margin: string,
-  marginBottom: string,
-  marginLeft: string,
-  marginRight: string,
-  marginTop: string,
-  maxHeight: string,
-  maxWidth: string,
-  minHeight: string,
-  minWidth: string,
-  order: number,
-  padding: string,
-  paddingBottom: string,
-  paddingLeft: string,
-  paddingRight: string,
-  paddingTop: string,
-  style: object,
-  width: string,
+  flex: PropTypes.string,
+  flexBasis: PropTypes.string,
+  flexDirection: PropTypes.oneOf([
+    'column-reverse',
+    'column',
+    'row-reverse',
+    'row',
+  ]),
+  flexGrow: PropTypes.number,
+  flexShrink: PropTypes.number,
+  flexWrap: PropTypes.oneOf(['nowrap', 'wrap-reverse', 'wrap']),
+  height: PropTypes.string,
+  inline: PropTypes.bool,
+  justifyContent: PropTypes.oneOf([
+    'center',
+    'flex-end',
+    'flex-start',
+    'space-around',
+    'space-between',
+  ]),
+  margin: PropTypes.string,
+  marginBottom: PropTypes.string,
+  marginLeft: PropTypes.string,
+  marginRight: PropTypes.string,
+  marginTop: PropTypes.string,
+  maxHeight: PropTypes.string,
+  maxWidth: PropTypes.string,
+  minHeight: PropTypes.string,
+  minWidth: PropTypes.string,
+  order: PropTypes.number,
+  padding: PropTypes.string,
+  paddingBottom: PropTypes.string,
+  paddingLeft: PropTypes.string,
+  paddingRight: PropTypes.string,
+  paddingTop: PropTypes.string,
+  style: PropTypes.object,
+  width: PropTypes.string,
 };
 
 Flexbox.defaultProps = {

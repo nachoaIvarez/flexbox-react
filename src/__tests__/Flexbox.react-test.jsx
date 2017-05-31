@@ -22,7 +22,7 @@ const testComponent = component =>
     const classNames = mockComponent.props.className.split(' ');
 
     ReactDOM.render(component, div);
-    const css = prettifyCSS(document.head.childNodes['1'].textContent);
+    const css = prettifyCSS(document.head.childNodes['0'].textContent);
 
     // Every class present in the rendered element must be either the TEST_CLASS (to test if
     // we can pass arbitrary classNames to the component) or generated classNames which must be

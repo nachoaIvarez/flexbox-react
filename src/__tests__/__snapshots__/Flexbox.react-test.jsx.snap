@@ -1,45 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc) 1`] = `
-".cmOkcp {
+"/*sc-component-id:sc-bdVaJa*/.sc-bdVaJa {
+}
+.cXgeQK {
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
 }
-.jwcsUI {
-  align-items:center;
+.DtNwl {
+  -webkit-align-items:center;
   -webkit-box-align:center;
   -ms-flex-align:center;
-  -webkit-align-items:center;
+  align-items:center;
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction:column;
-  -webkit-box-direction:normal;
-  -webkit-box-orient:vertical;
-  -ms-flex-direction:column;
   -webkit-flex-direction:column;
-  flex-grow:1;
-  -ms-flex-positive:1;
+  -ms-flex-direction:column;
+  flex-direction:column;
   -webkit-flex-grow:1;
-  flex-wrap:wrap;
-  -webkit-box-lines:multiple;
-  -ms-flex-wrap:wrap;
+  -ms-flex-grow:1;
+  flex-grow:1;
   -webkit-flex-wrap:wrap;
-  justify-content:center;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
   -webkit-box-pack:center;
-  -ms-flex-pack:center;
   -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
 }
-.YQCAm {
+.eylexG {
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
   height:100%;
   margin:66px33px;
@@ -55,94 +51,87 @@ exports[`Renders <Flexbox /> component with layout helpers (height, width, margi
 
 exports[`Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc) 2`] = `
 <div
-  className="YQCAm"
+  className="sc-bdVaJa eylexG"
 />
 `;
 
 exports[`Renders <Flexbox /> component with several flexbox props 1`] = `
-".cmOkcp {
+"/*sc-component-id:sc-bdVaJa*/.sc-bdVaJa {
+}
+.cXgeQK {
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
 }
-.jwcsUI {
-  align-items:center;
+.DtNwl {
+  -webkit-align-items:center;
   -webkit-box-align:center;
   -ms-flex-align:center;
-  -webkit-align-items:center;
+  align-items:center;
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction:column;
-  -webkit-box-direction:normal;
-  -webkit-box-orient:vertical;
-  -ms-flex-direction:column;
   -webkit-flex-direction:column;
-  flex-grow:1;
-  -ms-flex-positive:1;
+  -ms-flex-direction:column;
+  flex-direction:column;
   -webkit-flex-grow:1;
-  flex-wrap:wrap;
-  -webkit-box-lines:multiple;
-  -ms-flex-wrap:wrap;
+  -ms-flex-grow:1;
+  flex-grow:1;
   -webkit-flex-wrap:wrap;
-  justify-content:center;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
   -webkit-box-pack:center;
-  -ms-flex-pack:center;
   -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
 }
 "
 `;
 
 exports[`Renders <Flexbox /> component with several flexbox props 2`] = `
 <div
-  className="jwcsUI"
+  className="sc-bdVaJa DtNwl"
 />
 `;
 
 exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (like event handlers or className) 1`] = `
-".cmOkcp {
+"/*sc-component-id:sc-bdVaJa*/.sc-bdVaJa {
+}
+.cXgeQK {
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
 }
-.jwcsUI {
-  align-items:center;
+.DtNwl {
+  -webkit-align-items:center;
   -webkit-box-align:center;
   -ms-flex-align:center;
-  -webkit-align-items:center;
+  align-items:center;
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction:column;
-  -webkit-box-direction:normal;
-  -webkit-box-orient:vertical;
-  -ms-flex-direction:column;
   -webkit-flex-direction:column;
-  flex-grow:1;
-  -ms-flex-positive:1;
+  -ms-flex-direction:column;
+  flex-direction:column;
   -webkit-flex-grow:1;
-  flex-wrap:wrap;
-  -webkit-box-lines:multiple;
-  -ms-flex-wrap:wrap;
+  -ms-flex-grow:1;
+  flex-grow:1;
   -webkit-flex-wrap:wrap;
-  justify-content:center;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
   -webkit-box-pack:center;
-  -ms-flex-pack:center;
   -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
 }
-.YQCAm {
+.eylexG {
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
   height:100%;
   margin:66px33px;
@@ -158,52 +147,48 @@ exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (li
 
 exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (like event handlers or className) 2`] = `
 <div
-  className="test-class cmOkcp"
+  className="test-class sc-bdVaJa cXgeQK"
   id="test-id"
   onClick={[Function]}
 />
 `;
 
 exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too 1`] = `
-".cmOkcp {
+"/*sc-component-id:sc-bdVaJa*/.sc-bdVaJa {
+}
+.cXgeQK {
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
 }
-.jwcsUI {
-  align-items:center;
+.DtNwl {
+  -webkit-align-items:center;
   -webkit-box-align:center;
   -ms-flex-align:center;
-  -webkit-align-items:center;
+  align-items:center;
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction:column;
-  -webkit-box-direction:normal;
-  -webkit-box-orient:vertical;
-  -ms-flex-direction:column;
   -webkit-flex-direction:column;
-  flex-grow:1;
-  -ms-flex-positive:1;
+  -ms-flex-direction:column;
+  flex-direction:column;
   -webkit-flex-grow:1;
-  flex-wrap:wrap;
-  -webkit-box-lines:multiple;
-  -ms-flex-wrap:wrap;
+  -ms-flex-grow:1;
+  flex-grow:1;
   -webkit-flex-wrap:wrap;
-  justify-content:center;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
   -webkit-box-pack:center;
-  -ms-flex-pack:center;
   -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
 }
-.YQCAm {
+.eylexG {
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
   height:100%;
   margin:66px33px;
@@ -219,7 +204,7 @@ exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react
 
 exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too 2`] = `
 <div
-  className="cmOkcp"
+  className="sc-bdVaJa cXgeQK"
   style={
     Object {
       "backgroundColor": "red",
@@ -230,11 +215,12 @@ exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react
 `;
 
 exports[`Renders custom element (header) <Flexbox /> component 1`] = `
-".cmOkcp {
+"/*sc-component-id:sc-bdVaJa*/.sc-bdVaJa {
+}
+.cXgeQK {
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
 }
 "
@@ -242,16 +228,17 @@ exports[`Renders custom element (header) <Flexbox /> component 1`] = `
 
 exports[`Renders custom element (header) <Flexbox /> component 2`] = `
 <header
-  className="cmOkcp"
+  className="sc-bdVaJa cXgeQK"
 />
 `;
 
 exports[`Renders minimal <Flexbox /> component 1`] = `
-".cmOkcp {
+"/*sc-component-id:sc-bdVaJa*/.sc-bdVaJa {
+}
+.cXgeQK {
   display:-webkit-box;
-  display:-moz-box;
-  display:-ms-flexbox;
   display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
 }
 "
@@ -259,6 +246,6 @@ exports[`Renders minimal <Flexbox /> component 1`] = `
 
 exports[`Renders minimal <Flexbox /> component 2`] = `
 <div
-  className="cmOkcp"
+  className="sc-bdVaJa cXgeQK"
 />
 `;

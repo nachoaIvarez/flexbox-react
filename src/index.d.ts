@@ -21,7 +21,7 @@ declare namespace FlexboxReact {
 
     type FlexWraps = 'nowrap' | 'wrap-reverse' | 'wrap';
 
-    type JustifyContent = 'center' | 'flex-end' | 'flex-start' | 'space-around' | 'space-between';
+    type JustifyContent = 'center' | 'flex-end' | 'flex-start' | 'space-around' | 'space-between' | 'space-evenly';
 
     // <Flexbox />
     interface FlexboxProps {

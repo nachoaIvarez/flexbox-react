@@ -55,6 +55,35 @@ test(
 );
 
 test(
+  'Renders <Flexbox /> component with special properties set to the number 0`',
+  testComponent(
+    <Flexbox
+      flex={0}
+      flexBasis={0}
+      flexGrow={0}
+      flexShrink={0}
+      height={0}
+      margin={0}
+      marginBottom={0}
+      marginLeft={0}
+      marginRight={0}
+      marginTop={0}
+      maxWidth={0}
+      maxHeight={0}
+      minHeight={0}
+      minWidth={0}
+      order={0}
+      padding={0}
+      paddingBottom={0}
+      paddingLeft={0}
+      paddingRight={0}
+      paddingTop={0}
+      width={0}
+    />,
+  ),
+);
+
+test(
   'Renders <Flexbox /> component with layout helpers (height, width, margin, padding, etc)',
   testComponent(
     <Flexbox

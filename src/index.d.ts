@@ -24,7 +24,7 @@ declare namespace FlexboxReact {
     type JustifyContent = 'center' | 'flex-end' | 'flex-start' | 'space-around' | 'space-between';
 
     // <Flexbox />
-    interface FlexboxProps {
+    interface FlexboxProps extends React.HTMLAttributes<HTMLElement> {
         alignContent?: AlignContent;
         alignItems?: AlignItems;
         alignSelf?: AlignItems;

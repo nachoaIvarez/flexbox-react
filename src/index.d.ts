@@ -6,7 +6,6 @@
 import * as React from 'react';
 
 export as namespace FlexboxReact;
-export = FlexboxReact;
 
 declare namespace FlexboxReact {
     type AlignContent = 'center' | 'flex-end' | 'flex-start' | 'space-around' | 'space-between' | 'stretch';
@@ -60,5 +59,7 @@ declare namespace FlexboxReact {
         width?: string;
     }
 
-    export default class Flexbox extends React.Component<FlexboxProps, {}> {}
+    export class Flexbox extends React.Component<FlexboxProps, {}> {}
 }
+
+export default FlexboxReact.Flexbox;

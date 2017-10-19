@@ -33,16 +33,14 @@
     "url": "https://github.com/nachoaIvarez/flexbox-react/issues"
   },
   "homepage": "https://github.com/nachoaIvarez/flexbox-react#readme",
-  "optionalDependencies": {
-    "@types/react": "^15.0.21",
-    "@types/react-dom": "^0.14.23"
-  },
   "peerDependencies": {
     "prop-types": "*",
     "react": "*",
     "react-dom": "*"
   },
   "devDependencies": {
+    "@types/react": "^15.0.21",
+    "@types/react-dom": "^0.14.23",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.2",

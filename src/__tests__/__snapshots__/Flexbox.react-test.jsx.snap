@@ -21,8 +21,9 @@ exports[`Renders <Flexbox /> component with layout helpers (height, width, margi
   -webkit-flex-direction:column;
   -ms-flex-direction:column;
   flex-direction:column;
+  -webkit-box-flex:1;
   -webkit-flex-grow:1;
-  -ms-flex-grow:1;
+  -ms-flex-positive:1;
   flex-grow:1;
   -webkit-flex-wrap:wrap;
   -ms-flex-wrap:wrap;
@@ -76,8 +77,9 @@ exports[`Renders <Flexbox /> component with several flexbox props 1`] = `
   -webkit-flex-direction:column;
   -ms-flex-direction:column;
   flex-direction:column;
+  -webkit-box-flex:1;
   -webkit-flex-grow:1;
-  -ms-flex-grow:1;
+  -ms-flex-positive:1;
   flex-grow:1;
   -webkit-flex-wrap:wrap;
   -ms-flex-wrap:wrap;
@@ -117,8 +119,9 @@ exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (li
   -webkit-flex-direction:column;
   -ms-flex-direction:column;
   flex-direction:column;
+  -webkit-box-flex:1;
   -webkit-flex-grow:1;
-  -ms-flex-grow:1;
+  -ms-flex-positive:1;
   flex-grow:1;
   -webkit-flex-wrap:wrap;
   -ms-flex-wrap:wrap;
@@ -174,8 +177,9 @@ exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react
   -webkit-flex-direction:column;
   -ms-flex-direction:column;
   flex-direction:column;
+  -webkit-box-flex:1;
   -webkit-flex-grow:1;
-  -ms-flex-grow:1;
+  -ms-flex-positive:1;
   flex-grow:1;
   -webkit-flex-wrap:wrap;
   -ms-flex-wrap:wrap;

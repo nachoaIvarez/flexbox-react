@@ -12,7 +12,7 @@
     "clean": "rimraf dist",
     "lint": "eslint src",
     "test": "jest",
-    "check": "yarn run lint -s && yarn run test && dependency-check package.json --entry src",
+    "check": "yarn run lint && yarn run test && dependency-check package.json --entry src",
     "prebuild": "yarn run check -s && yarn run clean -s",
     "build": "babel --optional runtime src -d dist --copy-files --ignore src/__tests__",
     "prepublish": "yarn run build",
@@ -34,8 +34,8 @@
   },
   "homepage": "https://github.com/nachoaIvarez/flexbox-react#readme",
   "optionalDependencies": {
-    "@types/react": "^15.0.21",
-    "@types/react-dom": "^0.14.23"
+    "@types/react": "^16",
+    "@types/react-dom": "^16"
   },
   "peerDependencies": {
     "prop-types": "*",

@@ -15,7 +15,7 @@ declare namespace FlexboxReact {
 
     type Elements = 'article' | 'aside' | 'div' | 'figure' | 'footer' | 'header' | 'main' | 'nav' | 'section';
 
-    type FlexDisplays = 'flex' | 'inline-flex';
+    type FlexDisplays = 'display' | 'flex' | 'inline-flex';
 
     type FlexDirections = 'column-reverse' | 'column' | 'row-reverse' | 'row';
 

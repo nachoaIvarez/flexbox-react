@@ -77,7 +77,7 @@ Flexbox.propTypes = {
   alignItems: PropTypes.oneOf(['baseline', 'center', 'flex-end', 'flex-start', 'stretch']),
   alignSelf: PropTypes.oneOf(['baseline', 'center', 'flex-end', 'flex-start', 'stretch']),
   children: PropTypes.node,
-  display: PropTypes.oneOf(['flex', 'inline-flex']),
+  display: PropTypes.oneOf(['display', 'flex', 'inline-flex']),
   element: PropTypes.oneOf([
     'article',
     'aside',

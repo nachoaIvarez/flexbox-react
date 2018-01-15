@@ -88,3 +88,12 @@ test(
     />,
   ),
 );
+
+test(
+  'Renders <Flexbox /> with flex items with non-flex display',
+  testComponent(
+    <Flexbox>
+      <Flexbox display="block" />
+    </Flexbox>,
+  ),
+);

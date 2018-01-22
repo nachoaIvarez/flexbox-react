@@ -6,7 +6,6 @@
 import * as React from 'react';
 
 export as namespace FlexboxReact;
-export = FlexboxReact;
 
 declare namespace FlexboxReact {
     type AlignContent = 'center' | 'flex-end' | 'flex-start' | 'space-around' | 'space-between' | 'stretch';
@@ -21,10 +20,10 @@ declare namespace FlexboxReact {
 
     type FlexWraps = 'nowrap' | 'wrap-reverse' | 'wrap';
 
-    type JustifyContent = 'center' | 'flex-end' | 'flex-start' | 'space-around' | 'space-between';
+    type JustifyContent = 'center' | 'flex-end' | 'flex-start' | 'space-around' | 'space-between' | 'space-evenly';
 
     // <Flexbox />
-    interface FlexboxProps {
+    interface FlexboxProps extends React.HTMLAttributes<HTMLElement> {
         alignContent?: AlignContent;
         alignItems?: AlignItems;
         alignSelf?: AlignItems;
@@ -60,5 +59,7 @@ declare namespace FlexboxReact {
         width?: string;
     }
 
-    export default class Flexbox extends React.Component<FlexboxProps, {}> {}
+    export class Flexbox extends React.Component<FlexboxProps, {}> {}
 }
+
+export default FlexboxReact.Flexbox;

@@ -12,7 +12,7 @@
     "clean": "rimraf dist",
     "lint": "eslint src",
     "test": "jest",
-    "check": "yarn run lint -s && yarn run test && dependency-check package.json --entry src",
+    "check": "yarn run lint && yarn run test && dependency-check package.json --entry src",
     "prebuild": "yarn run check -s && yarn run clean -s",
     "build": "babel --optional runtime src -d dist --copy-files --ignore src/__tests__",
     "prepublish": "yarn run build",

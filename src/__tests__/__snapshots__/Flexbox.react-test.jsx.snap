@@ -21,8 +21,9 @@ exports[`Renders <Flexbox /> component with layout helpers (height, width, margi
   -webkit-flex-direction:column;
   -ms-flex-direction:column;
   flex-direction:column;
+  -webkit-box-flex:1;
   -webkit-flex-grow:1;
-  -ms-flex-grow:1;
+  -ms-flex-positive:1;
   flex-grow:1;
   -webkit-flex-wrap:wrap;
   -ms-flex-wrap:wrap;
@@ -113,8 +114,9 @@ exports[`Renders <Flexbox /> component with several flexbox props 1`] = `
   -webkit-flex-direction:column;
   -ms-flex-direction:column;
   flex-direction:column;
+  -webkit-box-flex:1;
   -webkit-flex-grow:1;
-  -ms-flex-grow:1;
+  -ms-flex-positive:1;
   flex-grow:1;
   -webkit-flex-wrap:wrap;
   -ms-flex-wrap:wrap;
@@ -232,8 +234,9 @@ exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (li
   -webkit-flex-direction:column;
   -ms-flex-direction:column;
   flex-direction:column;
+  -webkit-box-flex:1;
   -webkit-flex-grow:1;
-  -ms-flex-grow:1;
+  -ms-flex-positive:1;
   flex-grow:1;
   -webkit-flex-wrap:wrap;
   -ms-flex-wrap:wrap;
@@ -305,6 +308,69 @@ exports[`Renders <Flexbox /> with extra props, outside expected/defined ones (li
 />
 `;
 
+exports[`Renders <Flexbox /> with flex items with non-flex display 1`] = `
+"/*sc-component-id:sc-bdVaJa*/.sc-bdVaJa {
+}
+.cXgeQK {
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+}
+.DtNwl {
+  -webkit-align-items:center;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  -webkit-box-flex:1;
+  -webkit-flex-grow:1;
+  -ms-flex-positive:1;
+  flex-grow:1;
+  -webkit-flex-wrap:wrap;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
+}
+.eylexG {
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  height:100%;
+  margin:66px33px;
+  margin-right:25px;
+  max-width:100vw;
+  min-height:100vh;
+  padding:99px;
+  padding-left:50px;
+  width:100px;
+}
+.dLBgrm {
+  display:block;
+}
+"
+`;
+
+exports[`Renders <Flexbox /> with flex items with non-flex display 2`] = `
+<div
+  className="sc-bdVaJa cXgeQK"
+>
+  <div
+    className="sc-bdVaJa dLBgrm"
+  />
+</div>
+`;
+
 exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react related props too 1`] = `
 "/*sc-component-id:sc-bdVaJa*/.sc-bdVaJa {
 }
@@ -326,8 +392,9 @@ exports[`Renders <Flexbox /> with inline styles that can overwrite flexbox-react
   -webkit-flex-direction:column;
   -ms-flex-direction:column;
   flex-direction:column;
+  -webkit-box-flex:1;
   -webkit-flex-grow:1;
-  -ms-flex-grow:1;
+  -ms-flex-positive:1;
   flex-grow:1;
   -webkit-flex-wrap:wrap;
   -ms-flex-wrap:wrap;

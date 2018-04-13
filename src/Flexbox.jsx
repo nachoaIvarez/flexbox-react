@@ -109,6 +109,7 @@ Flexbox.propTypes = {
     'flex-start',
     'space-around',
     'space-between',
+    'space-evenly',
   ]),
   margin: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   marginBottom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

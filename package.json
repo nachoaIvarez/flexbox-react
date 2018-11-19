@@ -12,8 +12,8 @@
     "clean": "rimraf dist",
     "lint": "eslint src",
     "test": "jest",
-    "check": "yarn run lint -s && yarn run test && dependency-check package.json --entry src",
-    "prebuild": "yarn run check -s && yarn run clean -s",
+    "check": "yarn run lint && dependency-check package.json --entry src",
+    "prebuild": "yarn run check && yarn run clean",
     "build": "babel --optional runtime src -d dist --copy-files --ignore src/__tests__",
     "prepublish": "yarn run build",
     "postpublish": "git push origin master --follow-tags"

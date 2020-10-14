@@ -1,3 +1,10 @@
+## This project sunsetting
+I'm not longer maintaining this repo. I created this a relatively long time ago, gave it visibility on the internet and used it in multiple projects, in production, like many of you. Time passed and I can no longer devote time to `flexbox-react`. 
+
+I'm glad for the appearances of other libraries iterating in this concept I created (and I take pride on this) —From [material-ui](https://material-ui.com/system/flexbox/) to [chakra-ui](https://chakra-ui.com/box) and even [google's native android flexbox layout library](https://github.com/google/flexbox-layout).
+
+Thanks to all contributors along the way!
+
 <big><h1 align="center">flexbox-react</h1></big>
 
 <p align="center">

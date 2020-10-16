@@ -5,9 +5,8 @@ I'm glad for the appearances of other libraries iterating in this concept I crea
 
 Thanks to all contributors along the way!
 
-<big><h1 align="center">flexbox-react</h1></big>
-
-<p align="center">
+# flexbox-react
+<p>
   <a href="https://travis-ci.org/nachoaIvarez/flexbox-react">
     <img src="https://travis-ci.org/nachoaIvarez/flexbox-react.svg?branch=master"
          alt="Build Status">
@@ -33,7 +32,6 @@ Thanks to all contributors along the way!
          alt="License">
   </a>
 </p>
-
 
 ## Intro
 Unopinionated, standard compliant flexbox components.
